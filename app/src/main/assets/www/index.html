@@ -1,0 +1,569 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>رفيقي</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#4c3fc9"><link rel="icon" href="icon.svg"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="رفيقي">
+<style>
+:root{--bg:#eef1f9;--c:#fff;--t:#1a2040;--m:#6a7194;--p:#4c3fc9;--l:#d5daf0;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1230;--c:#171d45;--t:#eceefb;--m:#9aa3d6;--p:#f0b84a;--l:#29316a;--on:#1a1300}}
+:root[data-theme="dark"]{--bg:#0e1230;--c:#171d45;--t:#eceefb;--m:#9aa3d6;--p:#f0b84a;--l:#29316a;--on:#1a1300}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.8 "Segoe UI",Tahoma,"Noto Naskh Arabic",sans-serif;padding-bottom:70px}
+main{max-width:640px;margin:auto;padding:12px}
+.card{background:var(--c);border:1px solid var(--l);border-radius:14px;padding:12px;margin:10px 0}
+h2{margin:6px 0;font-size:18px;color:var(--p)}h3{margin:4px 0;font-size:16px}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--c);border-top:1px solid var(--l);display:flex;padding-bottom:env(safe-area-inset-bottom,0px);z-index:9}
+nav button{flex:1;border:0;background:0;color:var(--m);padding:8px 2px;font:inherit;font-size:12px}nav button.on{color:var(--p);font-weight:700}
+input,select,button.b{font:inherit;padding:8px;border-radius:10px;border:1px solid var(--l);background:var(--bg);color:var(--t);max-width:100%}
+button.b{background:var(--p);color:var(--on);border:0;cursor:pointer}button.g{background:var(--bg);color:var(--t);border:1px solid var(--l)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>*{flex:1 1 auto}
+.pt{display:flex;justify-content:space-between;padding:6px 4px;border-bottom:1px dashed var(--l)}.pt.nx{color:var(--p);font-weight:700}
+.sm{font-size:13px;color:var(--m)}.tag{display:inline-block;font-size:12px;padding:0 8px;border-radius:9px;background:var(--bg);border:1px solid var(--l);margin-left:4px}
+.dh{cursor:pointer;user-select:none}.dh .n{float:left;background:var(--p);color:var(--on);border-radius:12px;padding:0 10px}.dh.done{opacity:.45}
+#ms{font-size:56px;text-align:center;color:var(--p);margin:6px}
+.chips label{display:inline-block;margin:3px;padding:2px 10px;border:1px solid var(--l);border-radius:14px}
+a{color:var(--p)}
+
+:root{--gl:rgba(255,255,255,.55);--gb:rgba(255,255,255,.75);--g:rgba(76,63,201,.25)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--gl:rgba(30,38,90,.45);--gb:rgba(255,255,255,.12);--g:rgba(240,184,74,.25)}}
+:root[data-theme="dark"]{--gl:rgba(30,38,90,.45);--gb:rgba(255,255,255,.12);--g:rgba(240,184,74,.25)}
+body{background:radial-gradient(circle at 15% 0%,var(--g),transparent 45%),radial-gradient(circle at 90% 100%,var(--g),transparent 40%),var(--bg);background-attachment:fixed}
+.card,nav{background:var(--gl);border:1px solid var(--gb);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 4px 24px var(--g)}
+nav svg{width:22px;height:22px;display:block;margin:auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav button.on svg{filter:drop-shadow(0 0 6px var(--p))}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ib{width:38px;height:38px;border-radius:50%;border:1px solid var(--gb);background:var(--gl);color:var(--p);display:grid;place-items:center;font:inherit;font-weight:700;cursor:pointer;backdrop-filter:blur(10px)}
+.bar{height:8px;border-radius:6px;background:var(--l);overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--p),#8ab4ff);box-shadow:0 0 12px var(--p)}
+#cd{font-size:34px;font-weight:700;color:var(--p);text-shadow:0 0 14px var(--g);direction:ltr;text-align:center}
+button.b{box-shadow:0 0 14px var(--g)}p,.dh,h3{unicode-bidi:plaintext}
+
+body{padding-bottom:104px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.14;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%237d84c4' stroke-width='1'%3E%3Crect x='16' y='16' width='32' height='32'/%3E%3Crect x='16' y='16' width='32' height='32' transform='rotate(45 32 32)'/%3E%3Ccircle cx='32' cy='32' r='6'/%3E%3C/g%3E%3C/svg%3E")}
+nav{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:560px;margin:auto;border-radius:28px;padding:5px;box-shadow:0 12px 34px var(--g)}
+nav button{border-radius:22px;transition:.25s}nav button.on{background:var(--g);box-shadow:0 0 16px var(--g)}
+button.b{background:linear-gradient(135deg,color-mix(in srgb,var(--p) 88%,transparent),color-mix(in srgb,var(--p) 55%,transparent));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--gb);border-radius:999px;padding:9px 16px;box-shadow:0 8px 22px var(--g),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .2s,box-shadow .2s}
+button.b.g{background:var(--gl);color:var(--t)}
+button.b:hover,.ib:hover{transform:translateY(-3px)}button.b:active,.ib:active{transform:scale(.96)}
+.ib{box-shadow:0 8px 20px var(--g);transition:transform .2s}
+input,select{background:var(--gl);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:14px;border-color:var(--gb)}
+.card{border-radius:20px}.card.arch{border-radius:70px 70px 20px 20px;text-align:center;padding-top:22px}
+.card.arch .hd{justify-content:center;gap:16px}
+h2::before{content:"\2726 ";color:var(--p);text-shadow:0 0 10px var(--p)}
+.bsm{text-align:center;font-size:26px;color:var(--p);text-shadow:0 0 14px var(--g);line-height:1.4;margin:2px 0}
+.orn{display:flex;align-items:center;gap:8px;color:var(--p);margin:4px 0}.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--p),transparent)}
+
+/* ===== تصميم محسّن: طفو وإضاءة ===== */
+:root{--p2:#8ab4ff;--r:22px}
+:root[data-theme="dark"],:root:not([data-theme="light"]){--p2:#ffd98a}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--p2:#8ab4ff}}
+body{background:radial-gradient(circle at 12% -5%,var(--g),transparent 42%),radial-gradient(circle at 95% 105%,var(--g),transparent 45%),radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--p) 6%,transparent),transparent 60%),var(--bg);background-attachment:fixed}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes gw{0%,100%{box-shadow:0 8px 22px var(--g),0 0 0 0 transparent,inset 0 1px 0 rgba(255,255,255,.4)}50%{box-shadow:0 12px 30px var(--g),0 0 22px 2px var(--g),inset 0 1px 0 rgba(255,255,255,.4)}}
+@keyframes sh{to{background-position:200% 0}}
+.card{border-radius:var(--r);transition:transform .3s,box-shadow .3s;animation:in .5s both}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 36px var(--g),0 0 0 1px color-mix(in srgb,var(--p) 25%,transparent)}
+button.b{background:linear-gradient(135deg,var(--p),var(--p2));color:var(--on);font-weight:600;animation:fl 4s ease-in-out infinite,gw 3s ease-in-out infinite;letter-spacing:.2px}
+button.b.g{background:var(--gl);color:var(--t);animation:fl 5s ease-in-out infinite;box-shadow:0 8px 20px var(--g)}
+button.b:hover{transform:translateY(-4px) scale(1.04);animation-play-state:paused;box-shadow:0 14px 34px var(--g),0 0 28px 3px var(--g)}
+.row>button.b:nth-child(2n){animation-delay:.6s}.row>button.b:nth-child(3n){animation-delay:1.1s}
+.ib{animation:fl 4.5s ease-in-out infinite;box-shadow:0 8px 20px var(--g),0 0 14px var(--g)}.ib:hover{box-shadow:0 12px 28px var(--g),0 0 24px 3px var(--g)}
+nav{border-radius:30px;box-shadow:0 14px 40px var(--g),0 0 0 1px var(--gb);animation:fl 6s ease-in-out infinite}
+nav button{position:relative;padding:9px 2px 7px}
+nav button.on{background:linear-gradient(135deg,color-mix(in srgb,var(--p) 30%,transparent),color-mix(in srgb,var(--p2) 18%,transparent));box-shadow:0 0 20px var(--g),inset 0 0 0 1px var(--gb);transform:translateY(-3px)}
+nav button.on::after{content:"";position:absolute;bottom:2px;left:50%;width:18px;height:3px;margin-left:-9px;border-radius:3px;background:var(--p);box-shadow:0 0 10px var(--p)}
+.card.arch{background:linear-gradient(180deg,color-mix(in srgb,var(--p) 14%,var(--gl)),var(--gl))}
+#cd{background:linear-gradient(90deg,var(--p),var(--p2),var(--p));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:sh 4s linear infinite;text-shadow:none;filter:drop-shadow(0 0 12px var(--g))}
+.pt.nx{background:linear-gradient(90deg,transparent,var(--g),transparent);border-radius:10px;box-shadow:0 0 16px var(--g)}
+.tag{background:color-mix(in srgb,var(--p) 12%,transparent);border-color:color-mix(in srgb,var(--p) 30%,transparent);color:var(--p)}
+.chips label{transition:.2s;background:var(--gl)}.chips label:has(input:checked){border-color:var(--p);box-shadow:0 0 14px var(--g);color:var(--p)}
+input:focus,select:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px var(--g),0 0 18px var(--g)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+.dz{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;padding:18px 12px;margin:8px 0;border:2px dashed color-mix(in srgb,var(--p) 55%,transparent);border-radius:var(--r);background:color-mix(in srgb,var(--p) 7%,transparent);color:var(--p);cursor:pointer;transition:.25s}
+.dz:hover,.dz.over{background:color-mix(in srgb,var(--p) 16%,transparent);box-shadow:0 0 22px var(--g);transform:translateY(-2px)}
+.dz svg{filter:drop-shadow(0 0 8px var(--p))}
+.adcur{padding:8px 12px;border-radius:16px;background:var(--gl);border:1px solid var(--gb)}.adcur>b{color:var(--p)}
+.ad{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:8px 10px;margin:6px 0;border:1px solid var(--gb);border-radius:16px;background:var(--gl)}
+.ad.on{border-color:var(--p);box-shadow:0 0 16px var(--g)}.ad .adi{flex:1 1 140px;min-width:0;overflow-wrap:anywhere}
+.adb{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.adb .b{padding:5px 12px;font-size:13px}
+label.b{display:inline-block}
+</style></head><body><main id="app"></main>
+<nav id="nav"></nav>
+<script src="card.js"></script>
+<script>
+const $=s=>document.querySelector(s),H=(e,h)=>e.innerHTML=h;
+let S={ci:0,lat:null,lng:null,ad:0,nt:0,off:{},dn:{}};
+try{Object.assign(S,JSON.parse(localStorage.getItem('rm')||'{}'))}catch(e){}
+const sv=()=>{try{localStorage.setItem('rm',JSON.stringify(S))}catch(e){}try{nsd()}catch(e){}};
+const C=[["الجزائر العاصمة",36.75,3.04],["وهران",35.70,-.63],["قسنطينة",36.37,6.61],["عنابة",36.90,7.77],["البليدة",36.47,2.83],["باتنة",35.56,6.17],["سطيف",36.19,5.41],["تلمسان",34.88,-1.32],["بجاية",36.75,5.08],["تيزي وزو",36.71,4.05],["بسكرة",34.85,5.73],["ورقلة",31.95,5.32],["غرداية",32.49,3.67],["بشار",31.62,-2.22],["أدرار",27.87,-.29],["تمنراست",22.79,5.52],["مستغانم",35.93,.09],["سكيكدة",36.88,6.91],["الجلفة",34.67,3.26],["الأغواط",33.80,2.88],["سيدي بلعباس",35.19,-.63],["الشلف",36.17,1.33],["المدية",36.26,2.75],["جيجل",36.82,5.77],["تبسة",35.40,8.12],["الوادي",33.37,6.86],["معسكر",35.40,.14],["سعيدة",34.83,.15],["تيارت",35.37,1.32],["ميلة",36.45,6.26],["مخصص (إحداثيات)",0,0]];
+const PN=["الفجر","الشروق","الظهر","العصر","المغرب","العشاء"];
+function pt(d,lat,lng,tzv){const tz=tzv??-d.getTimezoneOffset()/60,j0=Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5+2440587.5-lng/360,r=Math.PI/180,sin=x=>Math.sin(x*r),cos=x=>Math.cos(x*r),fa=x=>(x%360+360)%360,fh=x=>(x%24+24)%24;
+const sp=t=>{const D=j0+t/24-2451545,g=fa(357.529+.98560028*D),q=fa(280.459+.98564736*D),L=fa(q+1.915*sin(g)+.02*sin(2*g)),e=23.439-3.6e-7*D,RA=fh(Math.atan2(cos(e)*sin(L),cos(L))/r/15);return{dec:Math.asin(sin(e)*sin(L))/r,eq:q/15-RA}};
+const mid=t=>fh(12-sp(t).eq),at=(a,t)=>{const s=sp(t),v=(-sin(a)-sin(s.dec)*sin(lat))/(cos(s.dec)*cos(lat));return Math.acos(Math.max(-1,Math.min(1,v)))/r/15};
+const A=-Math.atan(1/(1+Math.tan(Math.abs(lat-sp(13).dec)*r)))/r,k=tz-lng/15;
+return[mid(5)-at(18,5),mid(6)-at(.833,6),mid(12)+1/60,mid(13)+at(A,13),mid(18)+at(.833,18),mid(18)+at(17,18)].map(x=>fh(x+k))}
+const fm=h=>{let m=Math.round(h*60)%1440;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')};
+
+const tzo=(ms,z)=>{try{const f=new Intl.DateTimeFormat('en-US',{timeZone:z,hourCycle:'h23',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',second:'numeric'}).formatToParts(new Date(ms)),g=t=>+f.find(x=>x.type==t).value;return(Date.UTC(g('year'),g('month')-1,g('day'),g('hour'),g('minute'),g('second'))-Math.floor(ms/1000)*1000)/36e5}catch(e){return null}};
+const dvo=ms=>-new Date(ms).getTimezoneOffset()/60;
+const cto=ms=>{const o=S.tz?tzo(ms,S.tz):null;return o==null?dvo(ms):o};
+const cd=d=>new Date(d.getTime()+(cto(d.getTime())-dvo(d.getTime()))*36e5);
+const ptc=(d,la,ln)=>pt(cd(d),la,ln,cto(d.getTime()));
+const lname=()=>S.ci==C.length-1?(S.cn||'إحداثيات مخصصة'):C[S.ci][0];
+const loc=()=>S.ci==C.length-1?[S.lat??36.75,S.lng??3.04]:[C[S.ci][1],C[S.ci][2]];
+const day=()=>new Date().toISOString().slice(0,10);
+// ===== النوافل =====
+const RW=[["ركعتان قبل الفجر","ركعتا الفجر خير من الدنيا وما فيها (مسلم)"],["أربع قبل الظهر (أو ركعتان)","السنة الراتبة"],["ركعتان بعد الظهر","السنة الراتبة"],["أربع قبل العصر","«رحم الله امرأً صلى قبل العصر أربعاً» (أبو داود والترمذي وحسنه)"],["ركعتان بعد المغرب","السنة الراتبة"],["ركعتان بعد العشاء","السنة الراتبة"],["الضحى (ركعتان فأكثر)","وقتها من ارتفاع الشمس قدر رمح إلى قبيل الزوال"],["قيام الليل","«أفضل الصلاة بعد الفريضة صلاة الليل» (مسلم)"],["الوتر","«اجعلوا آخر صلاتكم بالليل وتراً» (متفق عليه)"],["تحية المسجد","ركعتان قبل الجلوس"]];
+const FS=[["الاثنين والخميس","كل أسبوع"],["الأيام البيض","13 و14 و15 من كل شهر هجري"],["ست من شوال","بعد رمضان، «كصيام الدهر» (مسلم)"],["يوم عرفة","لغير الحاج، يكفّر سنتين (مسلم)"],["تاسوعاء وعاشوراء","9 و10 من محرم"],["شهر محرم","أفضل الصيام بعد رمضان (مسلم)"],["صيام داود","يوم صيام ويوم إفطار"],["ثلاثة أيام من كل شهر","وصية النبي ﷺ لأبي هريرة (متفق عليه)"]];
+// ===== الأذكار =====
+const AK={
+"الصباح":[["آية الكرسي",1],["الإخلاص والفلق والناس",3],
+["أصبحنا وأصبح الملك لله والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير",1],
+["اللهم بك أصبحنا وبك أمسينا وبك نحيا وبك نموت وإليك النشور",1],
+["أصبحنا على فطرة الإسلام وعلى كلمة الإخلاص وعلى دين نبينا محمد ﷺ وعلى ملة أبينا إبراهيم حنيفاً مسلماً وما كان من المشركين",1],
+["اللهم أنت ربي لا إله إلا أنت خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي فإنه لا يغفر الذنوب إلا أنت (سيد الاستغفار)",1],
+["اللهم إني أصبحت أشهدك وأشهد حملة عرشك وملائكتك وجميع خلقك أنك أنت الله لا إله إلا أنت وحدك لا شريك لك وأن محمداً عبدك ورسولك",4],
+["اللهم ما أصبح بي من نعمة أو بأحد من خلقك فمنك وحدك لا شريك لك فلك الحمد ولك الشكر",1],
+["اللهم عافني في بدني، اللهم عافني في سمعي، اللهم عافني في بصري، لا إله إلا أنت",3],
+["اللهم إني أعوذ بك من الكفر والفقر، وأعوذ بك من عذاب القبر، لا إله إلا أنت",3],
+["حسبي الله لا إله إلا هو عليه توكلت وهو رب العرش العظيم",7],
+["بسم الله الذي لا يضر مع اسمه شيء في الأرض ولا في السماء وهو السميع العليم",3],
+["رضيت بالله رباً وبالإسلام ديناً وبمحمد ﷺ نبياً",3],
+["يا حي يا قيوم برحمتك أستغيث، أصلح لي شأني كله ولا تكلني إلى نفسي طرفة عين",1],
+["اللهم عالم الغيب والشهادة فاطر السماوات والأرض رب كل شيء ومليكه، أشهد أن لا إله إلا أنت، أعوذ بك من شر نفسي ومن شر الشيطان وشركه",1],
+["اللهم إني أسألك العفو والعافية في الدنيا والآخرة",1],
+["اللهم إني أسألك علماً نافعاً ورزقاً طيباً وعملاً متقبلاً",1],
+["سبحان الله وبحمده",100],
+["SAB",3],
+["لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير",10],
+["أستغفر الله وأتوب إليه",100],["اللهم صل وسلم على نبينا محمد",10]],
+"المساء":[["آية الكرسي",1],["الإخلاص والفلق والناس",3],
+["أمسينا وأمسى الملك لله والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير",1],
+["اللهم بك أمسينا وبك أصبحنا وبك نحيا وبك نموت وإليك المصير",1],
+["أمسينا على فطرة الإسلام وعلى كلمة الإخلاص وعلى دين نبينا محمد ﷺ وعلى ملة أبينا إبراهيم حنيفاً مسلماً وما كان من المشركين",1],
+["اللهم أنت ربي لا إله إلا أنت خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي فإنه لا يغفر الذنوب إلا أنت (سيد الاستغفار)",1],
+["اللهم إني أمسيت أشهدك وأشهد حملة عرشك وملائكتك وجميع خلقك أنك أنت الله لا إله إلا أنت وحدك لا شريك لك وأن محمداً عبدك ورسولك",4],
+["اللهم ما أمسى بي من نعمة أو بأحد من خلقك فمنك وحدك لا شريك لك فلك الحمد ولك الشكر",1],
+["اللهم عافني في بدني، اللهم عافني في سمعي، اللهم عافني في بصري، لا إله إلا أنت",3],
+["اللهم إني أعوذ بك من الكفر والفقر، وأعوذ بك من عذاب القبر، لا إله إلا أنت",3],
+["حسبي الله لا إله إلا هو عليه توكلت وهو رب العرش العظيم",7],
+["بسم الله الذي لا يضر مع اسمه شيء في الأرض ولا في السماء وهو السميع العليم",3],
+["رضيت بالله رباً وبالإسلام ديناً وبمحمد ﷺ نبياً",3],
+["يا حي يا قيوم برحمتك أستغيث، أصلح لي شأني كله ولا تكلني إلى نفسي طرفة عين",1],
+["اللهم عالم الغيب والشهادة فاطر السماوات والأرض رب كل شيء ومليكه، أشهد أن لا إله إلا أنت، أعوذ بك من شر نفسي ومن شر الشيطان وشركه",1],
+["أعوذ بكلمات الله التامات من شر ما خلق",3],
+["اللهم إني أسألك العفو والعافية في الدنيا والآخرة",1],
+["سبحان الله وبحمده",100],["SAB",3],
+["أستغفر الله وأتوب إليه",100],["اللهم صل وسلم على نبينا محمد",10]],
+"النوم":[["آية الكرسي",1],
+["الإخلاص والفلق والناس (يجمع كفيه وينفث فيهما ويمسح بهما ما استطاع من جسده)",3],
+["آخر آيتين من سورة البقرة (آمن الرسول بما أنزل إليه من ربه…)",1],
+["باسمك اللهم أموت وأحيا",1],
+["اللهم باسمك ربي وضعت جنبي وبك أرفعه، فإن أمسكت نفسي فارحمها وإن أرسلتها فاحفظها بما تحفظ به عبادك الصالحين",1],
+["اللهم خلقت نفسي وأنت توفاها، لك مماتها ومحياها، إن أحييتها فاحفظها وإن أمتها فاغفر لها، اللهم إني أسألك العافية",1],
+["اللهم أسلمت نفسي إليك ووجهت وجهي إليك وفوضت أمري إليك وألجأت ظهري إليك رغبة ورهبة إليك، لا ملجأ ولا منجا منك إلا إليك، آمنت بكتابك الذي أنزلت وبنبيك الذي أرسلت",1],
+["الحمد لله الذي أطعمنا وسقانا وكفانا وآوانا، فكم ممن لا كافي له ولا مؤوي",1],
+["سبحان الله",33],["الحمد لله",33],["الله أكبر",34],
+["اللهم قني عذابك يوم تبعث عبادك",3]],
+"بعد الصلاة":[["أستغفر الله",3],
+["اللهم أنت السلام ومنك السلام تباركت يا ذا الجلال والإكرام",1],
+["لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير، اللهم لا مانع لما أعطيت ولا معطي لما منعت ولا ينفع ذا الجد منك الجد",1],
+["سبحان الله",33],["الحمد لله",33],["الله أكبر",34],
+["لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير",1],
+["آية الكرسي",1],
+["الإخلاص والفلق والناس (ثلاثاً بعد الفجر وبعد المغرب، ومرة بعد بقية الصلوات)",1],
+["اللهم أعني على ذكرك وشكرك وحسن عبادتك",1]],
+"الاستيقاظ":[["الحمد لله الذي أحيانا بعد ما أماتنا وإليه النشور",1],
+["الحمد لله الذي عافاني في جسدي ورد علي روحي وأذن لي بذكره",1],
+["لا إله إلا أنت سبحانك إني كنت من الظالمين",1],
+["اللهم إني أسألك علماً نافعاً",1]],
+"الوضوء والخلاء":[["عند دخول الخلاء: بسم الله، اللهم إني أعوذ بك من الخبث والخبائث",1],
+["عند الخروج من الخلاء: غفرانك",1],
+["بعد الوضوء: أشهد أن لا إله إلا الله وحده لا شريك له وأشهد أن محمداً عبده ورسوله، اللهم اجعلني من التوابين واجعلني من المتطهرين",1]],
+"الطعام":[["قبل الأكل: بسم الله",1],
+["إن نسي في أوله: بسم الله أوله وآخره",1],
+["بعد الأكل: الحمد لله الذي أطعمني هذا ورزقنيه من غير حول مني ولا قوة",1],
+["للمضيف: اللهم بارك لهم فيما رزقتهم واغفر لهم وارحمهم",1]],
+"المنزل والمسجد":[["عند الخروج من المنزل: بسم الله توكلت على الله ولا حول ولا قوة إلا بالله",1],
+["عند دخول المنزل: بسم الله ولجنا وبسم الله خرجنا وعلى ربنا توكلنا، ثم يسلّم على أهله",1],
+["عند دخول المسجد: اللهم افتح لي أبواب رحمتك",1],
+["عند الخروج من المسجد: اللهم إني أسألك من فضلك",1],
+["عند سماع الأذان: ترديد ما يقوله المؤذن، ثم الصلاة على النبي ﷺ",1],
+["بعد الأذان: اللهم رب هذه الدعوة التامة والصلاة القائمة آت محمداً الوسيلة والفضيلة وابعثه مقاماً محموداً الذي وعدته",1]],
+"السفر":[["عند الركوب: بسم الله، الحمد لله، سبحان الذي سخر لنا هذا وما كنا له مقرنين وإنا إلى ربنا لمنقلبون، الحمد لله ثلاثاً، الله أكبر ثلاثاً، سبحانك إني ظلمت نفسي فاغفر لي فإنه لا يغفر الذنوب إلا أنت",1],
+["عند النزول في مكان: أعوذ بكلمات الله التامات من شر ما خلق",3],
+["عند العودة: آيبون تائبون عابدون لربنا حامدون",1]],
+"الكرب والهم":[["لا إله إلا الله العظيم الحليم، لا إله إلا الله رب العرش العظيم، لا إله إلا الله رب السماوات ورب الأرض ورب العرش الكريم",1],
+["اللهم إني أعوذ بك من الهم والحزن والعجز والكسل والبخل والجبن وضلع الدين وغلبة الرجال",1],
+["يا حي يا قيوم برحمتك أستغيث",1],
+["لا إله إلا أنت سبحانك إني كنت من الظالمين",1],
+["حسبنا الله ونعم الوكيل",1],
+["يا مقلب القلوب ثبت قلبي على دينك",1],
+["لا حول ولا قوة إلا بالله",10]]};
+Object.keys(AK).forEach(k=>AK[k].forEach(z=>{if(z[0]=='SAB')z[0]='سبحان الله وبحمده عدد خلقه ورضا نفسه وزنة عرشه ومداد كلماته'}));
+// ===== الأحاديث =====
+const HD=[["النية","إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى","عمر بن الخطاب","متفق عليه"],["الإيمان","بني الإسلام على خمس: شهادة أن لا إله إلا الله وأن محمداً رسول الله، وإقام الصلاة، وإيتاء الزكاة، والحج، وصوم رمضان","ابن عمر","متفق عليه"],["الإيمان","لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه","أنس","متفق عليه"],["الأخلاق","من كان يؤمن بالله واليوم الآخر فليقل خيراً أو ليصمت","أبو هريرة","متفق عليه"],["الأخلاق","المسلم من سلم المسلمون من لسانه ويده","عبد الله بن عمرو","متفق عليه"],["الأخلاق","الدين النصيحة","تميم الداري","مسلم"],["الأخلاق","لا يدخل الجنة من كان في قلبه مثقال ذرة من كبر","ابن مسعود","مسلم"],["الطهارة","الطهور شطر الإيمان","أبو مالك الأشعري","مسلم"],["الطهارة","لا يقبل الله صلاة أحدكم إذا أحدث حتى يتوضأ","أبو هريرة","متفق عليه"],["الطهارة","لولا أن أشق على أمتي لأمرتهم بالسواك عند كل صلاة","أبو هريرة","متفق عليه"],["الصلاة","صلاة الجماعة تفضل صلاة الفذ بسبع وعشرين درجة","ابن عمر","متفق عليه"],["الصلاة","من صلى البردين دخل الجنة","أبو موسى","متفق عليه"],["الصلاة","ما من عبد مسلم يصلي لله كل يوم ثنتي عشرة ركعة تطوعاً غير فريضة إلا بنى الله له بيتاً في الجنة","أم حبيبة","مسلم"],["الصلاة","ركعتا الفجر خير من الدنيا وما فيها","عائشة","مسلم"],["الصلاة","أفضل الصلاة بعد الفريضة صلاة الليل","أبو هريرة","مسلم"],["الصلاة","اجعلوا آخر صلاتكم بالليل وتراً","ابن عمر","متفق عليه"],["الصيام","من صام رمضان إيماناً واحتساباً غفر له ما تقدم من ذنبه","أبو هريرة","متفق عليه"],["الصيام","الصيام جنة","أبو هريرة","متفق عليه"],["الصيام","تسحروا فإن في السحور بركة","أنس","متفق عليه"],["الصيام","من صام يوماً في سبيل الله باعد الله وجهه عن النار سبعين خريفاً","أبو سعيد","متفق عليه"],["الصيام","من صام رمضان ثم أتبعه ستاً من شوال كان كصيام الدهر","أبو أيوب","مسلم"],["الصيام","صيام يوم عرفة أحتسب على الله أن يكفر السنة التي قبله والسنة التي بعده","أبو قتادة","مسلم"],["الصيام","أفضل الصيام بعد رمضان شهر الله المحرم","أبو هريرة","مسلم"],["الأذكار","كلمتان خفيفتان على اللسان ثقيلتان في الميزان حبيبتان إلى الرحمن: سبحان الله وبحمده، سبحان الله العظيم","أبو هريرة","متفق عليه"],["الأذكار","من قرأ بالآيتين من آخر سورة البقرة في ليلة كفتاه","أبو مسعود","متفق عليه"],["العمل","أحب الأعمال إلى الله أدومها وإن قل","عائشة","متفق عليه"]];
+const FT=[["ابن باز","binbaz.org.sa"],["ابن عثيمين","binothaimeen.net"],["ابن تيمية","islamweb.net"],["اللجنة الدائمة","alifta.gov.sa"]];
+const nz=s=>s.replace(/[\u064B-\u065F\u0670]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي');
+// ===== الأذان والأدعية =====
+const DU=["اللهم رب هذه الدعوة التامة والصلاة القائمة آت محمداً الوسيلة والفضيلة وابعثه مقاماً محموداً الذي وعدته","اللهم اجعلني من التوابين واجعلني من المتطهرين","رب اجعلني مقيم الصلاة ومن ذريتي ربنا وتقبل دعاء","ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار","اللهم أعني على ذكرك وشكرك وحسن عبادتك"];
+const ADT="الله أكبر الله أكبر. أشهد أن لا إله إلا الله. أشهد أن محمداً رسول الله. حي على الصلاة. حي على الفلاح. الله أكبر الله أكبر. لا إله إلا الله";
+const db=()=>new Promise((y,n)=>{const r=indexedDB.open('rm',1);r.onupgradeneeded=()=>r.result.createObjectStore('a');r.onsuccess=()=>y(r.result);r.onerror=n});
+const idb=async(m,f,...a)=>{const d=await db();return new Promise((y,n)=>{const q=d.transaction('a',m=='r'?'readonly':'readwrite').objectStore('a')[f](...a);q.onsuccess=()=>y(q.result);q.onerror=n})};
+let FL=[],QL=[],FZ={};const lf=()=>idb('r','getAllKeys').then(async k=>{FL=k.filter(x=>!String(x).startsWith('ق:'));QL=k.filter(x=>String(x).startsWith('ق:'));for(const f of FL){try{const b=await idb('r','get',f);FZ[f]=b?b.size:0}catch(e){}}if(tab==0)render()}).catch(()=>{});
+function speak(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ar-SA';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+const AC={};
+async function aud(f){let u=AC[f];if(!u){const r=await fetch(f);if(!r.ok)throw new Error('http '+r.status);u=AC[f]=URL.createObjectURL(await r.blob())}return new Audio(u)}
+async function play(i){const fl=(i==0&&S.ff)?S.ff:S.fl;if(fl&&fl.startsWith('adhan/')){try{stp();const t=PT,a=await aud(fl);if(t!=PT)return;CA=a;CK=fl;await a.play();return}catch(e){bn('تعذر تشغيل الأذان: '+(e&&e.message||e))}}if(fl&&!fl.startsWith('adhan/')){try{const b=await idb('r','get',fl);if(b){new Audio(URL.createObjectURL(b)).play();return}}catch(e){}}speak((i==0?ADT.replace('حي على الصلاة','حي على الصلاة. حي على الفلاح'):ADT)+(i==0?'. الصلاة خير من النوم':''))}
+async function up(fs){fs=[...fs];let ok=0,bad=[];for(const f of fs){if(!(f.type||'').startsWith('audio')&&!/\.(mp3|m4a|aac|wav|ogg|opus|flac)$/i.test(f.name)){bad.push(f.name);continue}try{await idb('w','put',f,f.name);if(!ok)S.fl=f.name;ok++}catch(e){bad.push(f.name)}}sv();await lf();if(ok)bn('تمت إضافة '+ok+(ok==1?' أذان وتعيينه للتنبيه':' أذانات'));if(bad.length)bn('تعذر إضافة: '+bad.slice(0,2).join('، ')+' (يلزم ملف صوتي)')}
+let CK='';
+function pl(k){if(CA&&CK==k&&!CA.paused){stp();CK='';return}idb('r','get',k).then(b=>{if(!b)return;if(CA)CA.pause();CA=new Audio(URL.createObjectURL(b));CK=k;CA.play().catch(()=>bn('تعذر تشغيل الملف'))}).catch(()=>{})}
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fsz=n=>n>1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB';
+function dr(e){e.preventDefault();$('#dz').classList.remove('over');up(e.dataTransfer.files)}
+async function rm(){if(S.fl){await idb('w','delete',S.fl);S.fl='';sv();lf()}}
+// ===== الواجهة =====
+const TB=["الصلاة","النوافل","الأذكار","تعلّم","القبلة","بحث"];let tab=0,hq='',hc='',hs='',fq='',fs=[0,1,2,3],fc="",ak="الصباح",cnt={},ms=0,mt=33;
+const go=i=>{tab=i;render()};
+const ICO=['<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>','<path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 16.7 6.7 19.6l1.1-6L3.4 9.4l6-.8z"/>','<circle cx="12" cy="12" r="3"/><circle cx="12" cy="4.5" r="1.5"/><circle cx="19" cy="9" r="1.5"/><circle cx="19" cy="16" r="1.5"/><circle cx="12" cy="20" r="1.5"/><circle cx="5" cy="16" r="1.5"/><circle cx="5" cy="9" r="1.5"/>','<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/>','<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>','<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/><path d="M8.5 11h5M11 8.5v5"/>'].map(p=>`<svg viewBox="0 0 24 24">${p}</svg>`);
+let dO=0;const PNF=["Fajr","Lever du soleil","Dhuhr","Asr","Maghrib","Isha"],TBF=["Prière","Sunnas","Adhkar","Apprendre","Qibla","Recherche"],F=()=>S.lg=='fr',pn=i=>(F()?PNF:PN)[i];
+const FRD={'النوافل':'Sunnas','الأذكار':'Adhkar','الأحاديث':'Hadiths','الفتاوى':'Fatwas','نوافل الصلوات (تتجدد يومياً)':'Prières surérogatoires (remises à zéro chaque jour)','نوافل الصيام':'Jeûnes surérogatoires','الصباح':'Matin','المساء':'Soir','النوم':'Coucher','بعد الصلاة':'Après la prière','المسبحة الإلكترونية':'Chapelet électronique','تصفير':'Remise à zéro','اضغط للعدّ التنازلي':'Touchez pour décompter','مكتبة الأحاديث الصحيحة':'Hadiths authentiques','كل الأبواب':'Tous les chapitres','كل المصادر':'Toutes les sources','متفق عليه':'Muttafaq alayh','لا نتائج':'Aucun résultat','فتاوى العلماء (مدمجة دون إنترنت)':'Fatwas des savants (hors ligne)','بحث موسّع في المواقع الرسمية (يحتاج إنترنت)':'Recherche étendue sur les sites officiels (internet requis)','بلا حد':'Illimité','قراء جاهزون':'Récitateurs prêts','أذانات جاهزة':'Adhans inclus','الأذان (مكتبتي)':'Adhans (ma bibliothèque)','القراءات (مكتبتي الصوتية)':'Récitations (ma bibliothèque audio)','تعيين للتنبيه':'Définir pour l’alerte','إيقاف':'Arrêter','التنبيهات: أذان وأدعية':'Alertes : adhan et invocations','تفعيل التنبيه عند دخول الوقت':"Alerte à l’heure de la prière",'أذان':'Adhan','دعاء':'Invocation','تجربة':'Tester','اختبار الإشعار':'Tester la notification','تنزيل أذان':'Télécharger un adhan','نص الأذان بصوت الجهاز':"Texte de l’adhan (voix de l’appareil)",'ابحث بكلمة…':'Rechercher…','حفظ':'Enregistrer','حذف المحدد':'Supprimer'};
+function tr(){if(!F())return;const w=document.createTreeWalker($('#app'),NodeFilter.SHOW_TEXT);let n,L=[];while(n=w.nextNode())L.push(n);L.forEach(n=>{const k=n.nodeValue.trim();if(FRD[k])n.nodeValue=n.nodeValue.replace(k,FRD[k])});$('#app').querySelectorAll('[placeholder]').forEach(e=>{if(FRD[e.placeholder])e.placeholder=FRD[e.placeholder]})}
+function ap(){const e=document.documentElement;if(S.th)e.dataset.theme=S.th;else delete e.dataset.theme;e.dir=F()?'ltr':'rtl';e.lang=F()?'fr':'ar'}
+function th(){const c=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');S.th=c=='dark'?'light':'dark';sv();render()}
+function lgx(){S.lg=F()?'ar':'fr';sv();render()}
+const hdr=()=>`<div class="hd"><div class="row" style="flex:0 1 auto;gap:8px;flex-wrap:nowrap"><svg width="30" height="30" viewBox="0 0 24 24" style="filter:drop-shadow(0 0 6px var(--p));flex:none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.7 6.7 0 0 0 10.5 10.5z" fill="var(--p)"/><path d="M18.5 3l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2z" fill="var(--p)"/></svg><h2 style="font-size:22px;margin:0">${F()?'Rafiqi':'رفيقي'}</h2></div><div class="row" style="flex:0 0 auto"><button class="ib" onclick="th()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button><button class="ib" onclick="lgx()">${F()?'ع':'FR'}</button></div></div>`;
+function render(){ap();const L=F()?TBF:TB;$('#nav').innerHTML=TB.map((_,i)=>`<button onclick="go(${i})" class="${i==tab?'on':''}">${ICO[i]}${L[i]}</button>`).join('');$('#app').innerHTML=hdr()+'<div class="bsm">﷽</div><div class="orn">✦</div>'+[vP,vN,vA,vL,vK,vS][tab]();tr()}
+const evs=()=>{const[la,ln]=loc();return[-1,0,1].flatMap(o=>{const d=new Date(Date.now()+o*864e5),f=cd(d),t=pt(f,la,ln,cto(d.getTime())),b=new Date(f.getFullYear(),f.getMonth(),f.getDate()).getTime()-(f.getTime()-d.getTime());return[0,2,3,4,5].map(i=>({i,ms:b+t[i]*36e5}))}).sort((a,b)=>a.ms-b.ms)};
+setInterval(()=>{const c=$('#cd');if(!c)return;const E=evs(),N=Date.now(),n=E.find(e=>e.ms>N),p=[...E].reverse().find(e=>e.ms<=N),s=Math.floor((n.ms-N)/1000);c.textContent=[s/3600|0,(s%3600)/60|0,s%60].map(x=>String(x).padStart(2,'0')).join(':');$('#pb').style.width=Math.min(100,(N-p.ms)/(n.ms-p.ms)*100)+'%';$('#nn').textContent=pn(n.i);$('#nx').textContent=new Date(n.ms).toTimeString().slice(0,5)},1000);
+function bn(m){if(navigator.vibrate)navigator.vibrate([200,100,200]);const e=document.createElement('div');e.className='card';e.style.cssText='position:fixed;top:10px;left:10px;right:10px;z-index:99';e.textContent=m;document.body.appendChild(e);setTimeout(()=>e.remove(),6000)}
+function ntf(a,b,d){if(window.RafiqiNative){try{RafiqiNative.notify(a,b||'',(d&&d.tab!=null)?+d.tab:0,(d&&d.ak)||'')}catch(e){}return}try{if(navigator.serviceWorker&&window.Notification&&Notification.permission=='granted'){navigator.serviceWorker.ready.then(r=>r.showNotification(a,{body:b,icon:'icon.svg',vibrate:[200,100,200],data:d||{}}));return}}catch(e){}try{if(window.Notification){if(Notification.permission=='granted'){new Notification(a,{body:b});return}if(Notification.permission=='default'){Notification.requestPermission().then(r=>r=='granted'&&ntf(a,b));return}}}catch(e){}bn(a+' — '+b)}
+const dl=()=>window.open('https://www.google.com/search?q='+encodeURIComponent('تحميل أذان mp3'),'_blank','noopener');
+function vP(){const[la,ln]=loc(),d=new Date(Date.now()+dO*864e5),t=ptc(d,la,ln),n=evs().find(e=>e.ms>Date.now()),hl=cd(new Date(n.ms)).getDate()==cd(d).getDate()&&!dO;
+return`<div class="card arch"><div class="sm">${F()?'Prochaine prière':'الصلاة القادمة'}</div><div class="hd"><b id="nn" style="font-size:20px">${pn(n.i)}</b><span id="nx">${cd(new Date(n.ms)).toTimeString().slice(0,5)}</span></div><div id="cd">--:--:--</div><div class="bar"><i id="pb" style="width:0"></i></div></div>
+<div class="card"><div class="hd"><button class="ib" onclick="dO--;render()">${F()?'‹':'›'}</button><div style="text-align:center"><b>${d.toLocaleDateString(F()?'fr-DZ':'ar-DZ',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:S.tz||undefined})}</b><div class="sm">${d.toLocaleDateString(F()?'fr-u-ca-islamic':'ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'long',year:'numeric',timeZone:S.tz||undefined})}</div></div><button class="ib" onclick="dO++;render()">${F()?'›':'‹'}</button></div>${dO?`<button class="b g" style="width:100%;margin-top:6px" onclick="dO=0;render()">${F()?'Aujourd’hui':'اليوم'}</button>`:''}
+<div class="row" style="margin-top:8px"><select onchange="S.ci=+this.value;if(S.ci!=C.length-1){S.tz='Africa/Algiers';S.cn=''}sv();render()">${C.map((c,i)=>`<option value=${i} ${i==S.ci?'selected':''}>${c[0]}</option>`).join('')}</select></div>
+<div class="row" style="margin-top:6px"><button class="b g" onclick="gps()">📍 موقعي الحالي</button></div>
+<div class="row" style="margin-top:6px"><select onchange="wsel(this.value);this.value=''"><option value="">مدن العالم…</option>${[...new Set(WC.map(c=>c.country))].map(k=>`<optgroup label="${k}">${WC.map((c,i)=>c.country==k?`<option value="${i}">${c.name}</option>`:'').join('')}</optgroup>`).join('')}</select></div>
+<div class="row" style="margin-top:6px"><input id="cs" type="search" placeholder="ابحث عن مدينتك في أي دولة" onkeydown="if(event.key=='Enter')cgo()"><button class="b" onclick="cgo()">بحث</button></div><div id="cr"></div>
+<div class="sm" style="margin-top:6px">الموقع الحالي: <b>${esc(lname())}</b></div>
+${S.ci==C.length-1?`<div class="row" style="margin-top:6px"><input id="la" type="number" step="any" placeholder="lat" value="${S.lat??''}"><input id="ln" type="number" step="any" placeholder="lng" value="${S.lng??''}"><button class="b" onclick="S.lat=+$('#la').value;S.lng=+$('#ln').value;S.tz='';S.cn='';sv();render()">حفظ</button></div>`:''}
+<div class="sm">${F()?'Calcul astronomique hors ligne (Fajr 18°, Isha 17°). Écart possible d’1 à 2 min avec le calendrier officiel.':'الحساب فلكي دون اتصال (الفجر 18° والعشاء 17°). قد يختلف دقيقة أو دقيقتين عن التقويم الرسمي.'}</div>
+${t.map((x,i)=>`<div class="pt ${hl&&i==n.i?'nx':''}"><span>${pn(i)}</span><span>${fm(x)}</span></div>`).join('')}</div>
+<div class="card"><h2>التنبيهات: الأذان</h2>
+<label><input type="checkbox" ${S.nt?'checked':''} onchange="tg(this.checked)"> تفعيل التنبيه عند دخول الوقت</label>
+<div class="chips">${PN.map((p,i)=>i==1?'':`<label><input type="checkbox" ${S.off[i]?'':'checked'} onchange="S.off[${i}]=!this.checked;sv()"> ${p}</label>`).join('')}</div>
+<label style="display:block;margin-top:6px"><input type="checkbox" ${S.pn?'checked':''} onchange="tpin(this.checked)"> إبقاء بطاقة الصلاة القادمة والتاريخ في شريط الإشعارات</label>
+<div class="row">
+<select onchange="S.fl=this.value;sv();render()"><option value="">نص الأذان بصوت الجهاز</option>${AL.map(a=>`<option value="adhan/${a.file}" ${"adhan/"+a.file==S.fl?"selected":""}>${a.name}</option>`).join("")}</select>
+<button class="b g" onclick="play(2)">تجربة</button></div><div class="row" style="margin-top:6px"><button class="b g" onclick="ntf('رفيقي','إشعار تجريبي')">اختبار الإشعار</button></div>
+<div class="sm">اختر الأذان من قائمة «الأذان» أدناه. قد يمنع المتصفح التشغيل التلقائي إن لم تتفاعل مع الصفحة. التنبيه يعمل والصفحة مفتوحة. إشعارات الشاشة تعمل غالباً على الحاسوب، وفي الهاتف قد يظهر شريط داخل الصفحة بدلاً منها.</div></div>`}
+function tg(v){S.nt=v;sv();if(v)ntf('رفيقي','تم تفعيل الإشعارات')}
+const NW={0:'ركعتا الفجر خير من الدنيا وما فيها: صلّ ركعتين خفيفتين قبل الفريضة',2:'أربع ركعات قبل الظهر وركعتان بعدها',3:'أربع ركعات قبل العصر',4:'ركعتان بعد المغرب',5:'ركعتان بعد العشاء ثم الوتر'};
+function tn(v){S.nn=v;sv();if(v)ntf('رفيقي','تم تفعيل تذكير النوافل مع الأذان')}
+
+// ===== بطاقة الصلاة القادمة في شريط الإشعارات =====
+function pcard(nm,hm,dt,hj){try{const c=document.createElement('canvas');drawCard(c,nm,hm,dt,hj,F());return c.toDataURL('image/png')}catch(e){return null}}
+function psave(){try{const N=Date.now(),L=F()?'fr-DZ':'ar-DZ',ev=evs().filter(e=>e.ms>N-6e4).map(e=>({ms:e.ms,nm:pn(e.i),hm:cd(new Date(e.ms)).toTimeString().slice(0,5)}));return caches.open('rafiqi-data').then(c=>c.put('sched',new Response(JSON.stringify({fr:F(),tz:S.tz||null,ev}))))}catch(e){}}
+async function pinN(){if(window.RafiqiNative){nsd();return}try{if(!S.pn||!window.Notification||Notification.permission!='granted'||!navigator.serviceWorker)return;const r=await navigator.serviceWorker.ready,N=Date.now(),n=evs().find(e=>e.ms>N);if(!n)return;psave();try{r.periodicSync&&r.periodicSync.register('rafiqi-refresh',{minInterval:36e5})}catch(e){}const d=new Date(),L=F()?'fr-DZ':'ar-DZ',hj=d.toLocaleDateString(F()?'fr-u-ca-islamic':'ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'long',year:'numeric'}),dt=d.toLocaleDateString(L,{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:S.tz||undefined}),hm=cd(new Date(n.ms)).toTimeString().slice(0,5),img=pcard(pn(n.i),hm,dt,hj),o={body:'',tag:'rafiqi-next',requireInteraction:true,silent:true,renotify:false,icon:'icon-192.png',badge:'badge-96.png',actions:[{action:'open',title:F()?'Ouvrir':'فتح رفيقي'},{action:'qibla',title:F()?'Qibla':'القبلة'}],data:{url:'./',tab:0}};if(img)o.image=img;await r.showNotification('🕌 '+pn(n.i)+'  '+hm,o)}catch(e){}}
+async function unpinN(){try{const r=await navigator.serviceWorker.ready;(await r.getNotifications({tag:'rafiqi-next'})).forEach(x=>x.close())}catch(e){}}
+async function tpin(v){if(window.RafiqiNative){S.pn=v?1:0;sv();render();return}if(!v){S.pn=0;sv();unpinN();render();return}if(!window.Notification||!navigator.serviceWorker){bn('الإشعارات الدائمة غير مدعومة في هذا المتصفح أو هذه الصفحة. ثبّت التطبيق من موقعه الأصلي.');render();return}let p=Notification.permission;if(p=='default')p=await Notification.requestPermission();if(p!='granted'){bn('لم يُسمح بالإشعارات. فعّلها من إعدادات المتصفح.');render();return}S.pn=1;sv();pinN();render()}
+setInterval(pinN,30000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)pinN()});setTimeout(pinN,2500);
+
+// ===== تذكيرات الأذكار والنوافل بالأوقات =====
+const RMD=[["sab","أذكار الصباح",2,"الصباح"],["mas","أذكار المساء",2,"المساء"],["nom","أذكار النوم",2,"النوم"],["bsl","أذكار بعد الصلاة",2,"بعد الصلاة"],["dha","صلاة الضحى",1],["qym","قيام الليل",1],["sym","صيام الاثنين والخميس والأيام البيض",1]];
+const RMT={sab:'حان وقت أذكار الصباح',mas:'حان وقت أذكار المساء',nom:'حان وقت أذكار النوم، ولا تنس الوتر',bsl:'أذكار بعد الصلاة: التسبيح والتحميد والتكبير',dha:'حان وقت صلاة الضحى: ركعتان فأكثر',qym:'بدأ الثلث الأخير من الليل، وقت قيام الليل والاستغفار',sym:'يُسن صيام يوم غد: الاثنين أو الخميس أو الأيام البيض'};
+function rmh(d){const[la,ln]=loc(),t=ptc(d||new Date(),la,ln),L=(t[0]+24-t[4]);return{sab:Math.min(t[0]+.42,t[1]-.17),mas:t[4]-.75,nom:t[5]+1,dha:t[1]+.34,qym:(t[4]+L*2/3)%24,sym:t[4]+.02,bsl:[0,2,3,4,5].map(i=>t[i]+.34),t}}
+function trm(k,v){S.rm=S.rm||{};S.rm[k]=v;sv();if(v)ntf('رفيقي','تم تفعيل التذكير',{})}
+const lrm={};
+setInterval(()=>{if(window.RafiqiNative)return;const R=S.rm;if(!R)return;const n0=new Date(),n=cd(n0),m=n.getHours()*60+n.getMinutes(),h=rmh(n0);RMD.forEach(r=>{const k=r[0];if(!R[k])return;if(k=='sym'){const tw=new Date(Date.now()+864e5),w=tw.getDay(),hd=hjD(tw);if(!(w==1||w==4||(hd>=13&&hd<=15)))return}const hs=k=='bsl'?h.bsl.filter((x,i)=>!S.off[[0,2,3,4,5][i]]):[h[k]];hs.forEach((x,i)=>{const id=day()+k+i;if(Math.round(x*60)%1440==m&&!lrm[id]){lrm[id]=1;ntf(r[1],RMT[k],{tab:r[2],ak:r[3]||''})}})})},20000);
+function gotab(d){if(d&&d.tab!=null){tab=+d.tab;if(d.ak)ak=d.ak;cnt={};render()}}
+try{navigator.serviceWorker.addEventListener('message',e=>gotab(e.data));const q=new URLSearchParams(location.search);if(q.get('go'))setTimeout(()=>gotab({tab:q.get('go'),ak:q.get('ak')}),300)}catch(e){}
+
+const hjD=d=>{try{return parseInt(new Intl.DateTimeFormat('en-u-ca-islamic-umalqura',{day:'numeric'}).format(d))}catch(e){return 0}};
+let last='';setInterval(()=>{if(window.RafiqiNative)return;if(!S.nt&&!S.nn)return;const[la,ln]=loc(),n=cd(new Date()),t=pt(n,la,ln,cto(Date.now())),m=n.getHours()*60+n.getMinutes();t.forEach((x,i)=>{if(i==1||S.off[i])return;const k=day()+i;if(Math.round(x*60)%1440==m&&last!=k){last=k;if(S.nt){play(i);ntf(F()?'Il est l’heure de '+PNF[i]:'حان الآن موعد صلاة '+PN[i],'')}if(S.nn&&NW[i])setTimeout(()=>ntf((S.nt?'تذكير بالنوافل':'حان موعد صلاة '+PN[i]),NW[i]),S.nt?4000:0)}})},20000);
+function ck(k,v){const d=day();S.dn[d]=S.dn[d]||{};S.dn[d][k]=v;for(const x in S.dn)if(x!=d)delete S.dn[x];sv()}
+function vN(){const d=S.dn[day()]||{};return`<div class="card"><h2>تذكير النوافل</h2><label><input type="checkbox" ${S.nn?'checked':''} onchange="tn(this.checked)"> ذكّرني بالنوافل عند كل أذان</label><div class="sm">يصلك تنبيه بالسنن الراتبة في الوقت نفسه الذي يدخل فيه وقت كل صلاة، مع الأذان إن كان تنبيه الأذان مفعّلاً. يتبع اختيارك للصلوات في تبويب «الصلاة». يعمل والصفحة مفتوحة.</div><div class="row" style="margin-top:6px"><button class="b g" onclick="ntf('تذكير بالنوافل',NW[2])">تجربة التذكير</button></div></div>
+<div class="card"><h2>تذكيرات الأذكار والنوافل بأوقاتها</h2>${(()=>{const h=rmh();return RMD.map(r=>{const k=r[0],tm=k=='bsl'?'بعد كل أذان بنحو ٢٠ دقيقة':fm(h[k]);return`<label style="display:block"><input type="checkbox" ${(S.rm||{})[k]?'checked':''} onchange="trm('${k}',this.checked)"> <b>${r[1]}</b> <span class="sm">${tm}</span></label>`}).join('')})()}<div class="sm">تصلك الإشعارات في الأوقات المحسوبة لمدينتك، وتفتح الضغطة عليها قسم الأذكار مباشرة. تعمل والصفحة مفتوحة. وقت القيام هو بداية الثلث الأخير من الليل.</div><div class="row" style="margin-top:6px"><button class="b g" onclick="ntf('أذكار الصباح',RMT.sab,{tab:2,ak:'الصباح'})">تجربة التذكير</button></div></div><div class="card"><h2>نوافل الصلوات (تتجدد يومياً)</h2>${RW.map((r,i)=>`<label style="display:block"><input type="checkbox" ${d['r'+i]?'checked':''} onchange="ck('r${i}',this.checked)"> <b>${r[0]}</b><div class="sm">${r[1]}</div></label>`).join('')}</div>
+<div class="card"><h2>نوافل الصيام</h2>${FS.map((r,i)=>`<label style="display:block"><input type="checkbox" ${d['f'+i]?'checked':''} onchange="ck('f${i}',this.checked)"> <b>${r[0]}</b><div class="sm">${r[1]}</div></label>`).join('')}</div>`}
+function vA(){const L=AK[ak];return`<div class="card"><div class="row">${Object.keys(AK).map(k=>`<button class="b ${k==ak?'':'g'}" onclick="ak='${k}';cnt={};render()">${k}</button>`).join('')}</div></div>
+${L.map((z,i)=>{const c=cnt[ak+i]??z[1];return`<div class="card dh ${c==0?'done':''}" onclick="cnt['${ak}${i}']=Math.max(0,${c}-1);render()"><span class="n">${c}</span>${z[0]}<div class="sm">اضغط للعدّ التنازلي</div></div>`}).join('')}
+<div class="card"><h2>المسبحة الإلكترونية</h2><div id="ms" onclick="ms++;if(navigator.vibrate)navigator.vibrate(15);if(mt&&ms>=mt){if(navigator.vibrate)navigator.vibrate(200);ms=0}$('#ms').textContent=ms" style="cursor:pointer">${ms}</div>
+<div class="row"><select onchange="mt=+this.value">${[[33,'33'],[99,'99'],[100,'100'],[0,'بلا حد']].map(o=>`<option value=${o[0]} ${o[0]==mt?'selected':''}>${o[1]}</option>`).join('')}</select><button class="b g" onclick="ms=0;render()">تصفير</button></div></div>`}
+function vH(){const q=nz(hq),R=HD.filter(h=>(!hc||h[0]==hc)&&(!hs||h[3].includes(hs))&&(!q||nz(h[1]+h[2]+h[0]).includes(q))),cs=[...new Set(HD.map(h=>h[0]))];
+return`<div class="card"><h2>مكتبة الأحاديث الصحيحة</h2><input id="hq" style="width:100%" placeholder="ابحث بكلمة…" value="${hq}" oninput="hq=this.value;rh()">
+<div class="row" style="margin-top:6px"><select onchange="hc=this.value;rh()"><option value="">كل الأبواب</option>${cs.map(c=>`<option ${c==hc?'selected':''}>${c}</option>`).join('')}</select><select onchange="hs=this.value;rh()"><option value="">كل المصادر</option><option value="متفق" ${hs=='متفق'?'selected':''}>متفق عليه</option><option value="مسلم" ${hs=='مسلم'?'selected':''}>مسلم</option></select></div>
+<div class="sm">مختارات مدمجة من الصحيحين تعمل دون اتصال. الألفاظ قد تتفاوت بين الروايات، فراجع الصحيحين للتوثيق.</div></div><div id="hl">${hl(R)}</div>`}
+const hl=R=>R.map(h=>`<div class="card"><span class="tag">${h[0]}</span><span class="tag">${h[3]}</span><p>«${h[1]}»</p><div class="sm">عن ${h[2]} رضي الله عنه</div></div>`).join('')||'<div class="card">لا نتائج</div>';
+function rh(){const q=nz(hq);$('#hl').innerHTML=hl(HD.filter(h=>(!hc||h[0]==hc)&&(!hs||h[3].includes(hs))&&(!q||nz(h[1]+h[2]+h[0]).includes(q))))}
+const FD=[["الطهارة","اللجنة الدائمة وابن باز وابن عثيمين","نواقض الوضوء","خروج الخارج من السبيلين، والنوم المستغرق، وزوال العقل بإغماء أو جنون، وأكل لحم الإبل عند كثير من أهل العلم كابن باز وابن عثيمين."],["الطهارة","اللجنة الدائمة وابن باز وابن عثيمين","مدة المسح على الخفين","يوم وليلة للمقيم، وثلاثة أيام بلياليها للمسافر، تبدأ من أول مسح بعد الحدث، بشرط لبسهما على طهارة."],["الصلاة","ابن باز وابن عثيمين","القصر في السفر","يقصر المسافر الصلاة الرباعية إلى ركعتين، وقدّر العالمان مسافة السفر بنحو ثمانين كيلومتراً."],["الصلاة","اللجنة الدائمة","الصلاة لمن لا يقدر على القيام","يصلي جالساً، فإن عجز فعلى جنب، لحديث عمران بن حصين في صحيح البخاري."],["الصلاة","ابن باز وابن عثيمين","صلاة الجماعة للرجال","يرى العالمان أنها واجبة على الرجال القادرين في المسجد، ويُعذر بالمرض والخوف والمطر الشديد ونحوها."],["الصلاة","ابن باز","صلاة الاستخارة","ركعتان من غير الفريضة ثم دعاء الاستخارة الوارد في حديث جابر في البخاري، ثم يمضي فيما ينشرح له صدره."],["الصيام","اللجنة الدائمة وابن باز وابن عثيمين","من أكل أو شرب ناسياً وهو صائم","يتم صومه ولا قضاء عليه ولا كفارة، لحديث أبي هريرة المتفق عليه."],["الصيام","اللجنة الدائمة وابن عثيمين","صيام المسافر والمريض","يجوز لهما الفطر ويقضيان، لقوله تعالى: فعدة من أيام أخر. ويصوم المسافر إن لم يشق عليه، وهو الأفضل عند ابن عثيمين."],["الزكاة","اللجنة الدائمة","نصاب الذهب والفضة","نصاب الذهب 85 غراماً من الخالص، والفضة 595 غراماً، والواجب ربع العشر (2.5%) بعد مرور سنة هجرية."],["العقيدة","ابن تيمية","التلفظ بالنية","قرر أن محل النية القلب، وأن التلفظ بها كقول «نويت أن أصلي» غير مشروع (مجموع الفتاوى)."],["أصول","ابن تيمية","قاعدة العبادات والعادات","الأصل في العبادات التوقيف، فلا يشرع منها إلا ما شرعه الله، والأصل في العادات الإباحة إلا ما حرمه الله (مجموع الفتاوى)."]];
+const hn=(R,f)=>R.length?R.map(f).join(''):'<div class="card">لا نتائج</div>';
+function lfd(){const q=nz(fq);return hn(FD.filter(f=>fs.some(i=>f[1].includes(FT[i][0]))&&(!fc||f[0]==fc)&&(!q||nz(f[0]+f[2]+f[3]).includes(q))),f=>`<div class="card"><span class="tag">${f[0]}</span><span class="tag">${f[1]}</span><h3>${f[2]}</h3><p>${f[3]}</p></div>`)}
+function rf(){$('#fl').innerHTML=lfd()}
+function vF(){const cs=[...new Set(FD.map(f=>f[0]))];return`<div class="card"><h2>فتاوى العلماء (مدمجة دون إنترنت)</h2><input style="width:100%" placeholder="ابحث بكلمة…" value="${fq}" oninput="fq=this.value;rf()">
+<div class="chips">${FT.map((f,i)=>`<label><input type="checkbox" ${fs.includes(i)?'checked':''} onchange="fs=this.checked?[...fs,${i}]:fs.filter(x=>x!=${i});rf()"> ${f[0]}</label>`).join('')}</div>
+<select onchange="fc=this.value;rf()"><option value="">كل الأبواب</option>${cs.map(c=>`<option ${c==fc?'selected':''}>${c}</option>`).join('')}</select>
+<div class="sm">هذه خلاصات مختصرة لمسائل مشهورة وليست نصوصاً حرفية، فارجع للمواقع الرسمية في المسائل الخاصة. المكتبة المدمجة محدودة.</div>
+<button class="b g" style="margin-top:6px" onclick="fgo()">بحث موسّع في المواقع الرسمية (يحتاج إنترنت)</button></div><div id="fl">${lfd()}</div>`}
+function fgo(){const q=fq.trim();if(!q)return;fs.forEach(i=>{const f=FT[i];window.open('https://www.google.com/search?q='+encodeURIComponent('site:'+f[1]+' '+q),'_blank','noopener')})}
+let CA=null;let AL=[];
+let PT=0;const stp=()=>{PT++;if(CA){CA.pause();CA=null}CK=''};
+async function rm2(i){const k=FL[i];await idb('w','delete',k);if(S.fl==k)S.fl='';if(S.ff==k)S.ff='';sv();if(CK==k)stp();lf()}
+async function ld(){try{AL=await(await fetch('adhan/list.json')).json()}catch(e){AL=[]}if(tab==0)render()}
+const bt=(c,i)=>`<button class="ib" style="display:inline-grid;width:34px;height:34px" onclick="${c}">${i}</button>`;
+function pa(f){if(CA&&CK==f&&!CA.paused){stp();return}stp();const t=PT;aud(f).then(a=>{if(t!=PT)return;CA=a;CK=f;return a.play()}).catch(e=>bn('تعذر تشغيل الأذان: '+(e&&e.message||e)))}
+function vAd(){const nm=f=>{const a=AL.find(x=>'adhan/'+x.file==f);return a?a.name:''};return`<div class="card"><h2>الأذان</h2>
+<div class="adcur"><div class="sm">الأذان المعيّن للتنبيه</div><b>${nm(S.fl)||'نص الأذان بصوت الجهاز'}</b>${S.ff&&nm(S.ff)?`<div class="sm">أذان الفجر: <b>${nm(S.ff)}</b> <button class="b g" style="padding:2px 12px" onclick="S.ff='';sv();render()">إزالة</button></div>`:''}</div>
+${AL.length?AL.map((a,i)=>{const f='adhan/'+a.file;return`<div class="ad ${f==S.fl?'on':''}"><div class="adi"><b>${a.name}</b><div class="sm">${f==S.fl?'للتنبيه':''}${f==S.fl&&f==S.ff?' · ':''}${f==S.ff?'للفجر':''}</div></div><div class="adb">${bt(`pa('${f}')`,'▶')}<button class="b g" onclick="S.fl='${f}';S.ty=0;sv();render()">${f==S.fl?'✓ معيّن':'تعيين'}</button><button class="b g" onclick="S.ff='${f}';S.ty=0;sv();render()">للفجر</button></div></div>`}).join(''):`<div class="sm">لا توجد أذانات.</div>`}</div>`}
+
+const vP0=vP;vP=()=>{const o=vP0(),i=o.indexOf('<div class="card">');return o.slice(0,i)+vD()+o.slice(i)+vAd()};
+
+
+// ===== تعلّم الصلاة =====
+const PR={
+"الصفة":[
+["١. النية والتكبير","ينوي بقلبه الصلاة التي يريدها ولا يتلفظ بالنية، ثم يستقبل القبلة ويقول «الله أكبر» رافعاً يديه إلى حذو المنكبين أو الأذنين."],
+["٢. القيام","يضع يده اليمنى على اليسرى على صدره، وينظر إلى موضع سجوده، ويقرأ دعاء الاستفتاح ثم يتعوذ ويبسمل."],
+["٣. القراءة","يقرأ الفاتحة ثم يقول «آمين»، ثم يقرأ ما تيسر من القرآن في الركعتين الأوليين."],
+["٤. الركوع","يكبر ويرفع يديه ثم يركع واضعاً كفيه على ركبتيه مفرجتي الأصابع، ويسوّي ظهره برأسه، ويقول «سبحان ربي العظيم»."],
+["٥. الرفع من الركوع","يرفع قائلاً «سمع الله لمن حمده» ويرفع يديه، فإذا استوى قائماً قال «ربنا ولك الحمد»."],
+["٦. السجود","يكبر ويسجد على سبعة أعضاء: الجبهة مع الأنف، والكفين، والركبتين، وأطراف القدمين، ويقول «سبحان ربي الأعلى»، ويجافي عضديه عن جنبيه."],
+["٧. الجلوس بين السجدتين","يرفع مكبراً ويجلس مفترشاً على رجله اليسرى وينصب اليمنى، ويقول «رب اغفر لي»، ثم يسجد الثانية كالأولى."],
+["٨. بقية الركعات","يقوم للركعة الثانية فيفعل كالأولى بغير استفتاح، ثم يجلس للتشهد الأول إن كانت الصلاة ثلاثية أو رباعية."],
+["٩. التشهد والتسليم","في الأخير يتشهد ثم يصلي على النبي ﷺ ويتعوذ بالله من أربع ويدعو بما شاء، ثم يسلّم عن يمينه وعن شماله قائلاً «السلام عليكم ورحمة الله»."]],
+"الشروط":[
+["الإسلام","فلا تصح الصلاة من كافر."],["العقل","فلا تجب على المجنون ولا تصح منه."],["التمييز","يؤمر بها الصبي لسبع ويضرب عليها لعشر."],
+["رفع الحدث","بالوضوء من الحدث الأصغر والغسل من الأكبر، أو التيمم عند العجز عن الماء."],
+["إزالة النجاسة","من البدن والثوب والمكان الذي يصلي فيه."],
+["ستر العورة","عورة الرجل من السرة إلى الركبة ويستر منكبيه في الفرض، وعورة المرأة الحرة جميع بدنها في الصلاة إلا وجهها."],
+["دخول الوقت","فلا تصح الصلاة قبل وقتها."],["استقبال القبلة","مع القدرة، ويسقط عند العجز كخوف شديد أو مريض لا يستطيع التوجه."],
+["النية","محلها القلب، ولا يشرع التلفظ بها."]],
+"الأركان":[
+["القيام","في الفرض مع القدرة."],["تكبيرة الإحرام","قول «الله أكبر» عند الدخول في الصلاة."],
+["قراءة الفاتحة","في كل ركعة على الإمام والمنفرد، وفي حق المأموم تفصيل وخلاف بين أهل العلم."],
+["الركوع","الانحناء حتى تصل اليدان إلى الركبتين."],["الرفع من الركوع","الرجوع إلى القيام."],["الاعتدال قائماً","الاستواء قائماً بعد الركوع."],
+["السجود","على الأعضاء السبعة."],["الجلوس بين السجدتين","مع الرفع من السجود."],["الطمأنينة في كل ركن","السكون حتى يستقر كل عضو، وهي من أشهر ما يقع فيه التقصير."],
+["التشهد الأخير","«التحيات لله والصلوات والطيبات…»."],["الجلوس للتشهد الأخير","جلوس التورك."],
+["الصلاة على النبي ﷺ","بعد التشهد الأخير، وأقلها «اللهم صل على محمد»."],["التسليمتان","كلتاهما ركن عند الحنابلة، واختار ابن عثيمين أن الركن هي الأولى والثانية سنة، فلا يتركها المصلي."],
+["ترتيب الأركان","أن يأتي بها على الترتيب المعروف."],
+["ملاحظة","هذا عدّ الحنابلة (أربعة عشر ركناً) كما اختاره ابن باز وابن عثيمين، وقد يعدّها بعض العلماء بطريقة مختلفة. من ترك ركناً عمداً بطلت صلاته، ومن تركه سهواً أتى به ولا يجبره سجود السهو وحده."]],
+"الواجبات":[
+["تكبيرات الانتقال","جميع التكبيرات غير تكبيرة الإحرام."],["«سمع الله لمن حمده»","للإمام والمنفرد."],["«ربنا ولك الحمد»","للجميع."],
+["«سبحان ربي العظيم»","في الركوع مرة، والزيادة سنة."],["«سبحان ربي الأعلى»","في السجود مرة، والزيادة سنة."],
+["«رب اغفر لي»","بين السجدتين."],["التشهد الأول","في الصلاة الثلاثية والرباعية."],["الجلوس للتشهد الأول",""],
+["حكمها","من تركها عمداً بطلت صلاته، ومن تركها سهواً جبرها بسجود السهو."]],
+"السنن":[
+["سنن الأقوال: دعاء الاستفتاح","«سبحانك اللهم وبحمدك وتبارك اسمك وتعالى جدك ولا إله غيرك»."],
+["التعوذ والبسملة","قبل قراءة الفاتحة."],["التأمين","قول «آمين» بعد الفاتحة."],["قراءة سورة بعد الفاتحة","في الركعتين الأوليين."],
+["الجهر والإخفات","الجهر في الفجر وأوليي المغرب والعشاء، والإسرار في غيرها."],["الزيادة على الواجب","من التسبيح والتحميد والدعاء في الركوع والسجود وبين السجدتين."],
+["الدعاء بعد التشهد الأخير","التعوذ من عذاب جهنم وعذاب القبر وفتنة المحيا والممات وفتنة المسيح الدجال، ثم الدعاء."],
+["سنن الأفعال: رفع اليدين","عند تكبيرة الإحرام وعند الركوع وعند الرفع منه وعند القيام إلى الثالثة."],
+["وضع اليمنى على اليسرى","على الصدر."],["النظر إلى موضع السجود",""],["التفريج بين القدمين","في القيام."],
+["الركوع","وضع اليدين على الركبتين مفرجتي الأصابع، وتسوية الظهر بالرأس."],["مجافاة العضدين عن الجنبين","في السجود، ورفع البطن عن الفخذين."],
+["الافتراش والتورك","الافتراش في التشهد الأول وبين السجدتين، والتورك في التشهد الأخير."],["الإشارة بالسبابة","في التشهد عند ذكر الله."],
+["الالتفات بالتسليم","يميناً وشمالاً."],
+["حكمها","لا تبطل الصلاة بتركها ولا يجب لها سجود السهو، ويفوت بتركها الأجر."]],
+"المبطلات":[
+["الكلام عمداً","من كلام الناس لغير مصلحة الصلاة."],["الضحك","وهو القهقهة بصوت."],["الأكل والشرب","عمداً."],
+["الحركة الكثيرة المتوالية","لغير ضرورة."],["انكشاف العورة","مع طول الزمن أو القدرة على الستر."],["انتقاض الوضوء","بخروج ريح أو بول أو غيرهما."],
+["ترك ركن أو شرط عمداً",""],["زيادة ركن فعلي عمداً","كركوع أو سجود زائد."],["استدبار القبلة","بالجسم كله."],
+["الأمر المخفف","الحركة اليسيرة للحاجة، والتنحنح، والبكاء من خشية الله لا تبطل الصلاة."]],
+"المكروهات":[
+["الالتفات بلا حاجة","وهو اختلاس من الشيطان من صلاة العبد."],["رفع البصر إلى السماء","ورد النهي الشديد عنه."],
+["العبث والحركة بلا حاجة",""],["الصلاة بحضرة طعام تشتهيه","أو مع مدافعة البول والغائط."],
+["وضع اليدين على الخاصرة",""],["الصلاة وهو في حال النعاس الشديد","حتى لا يدري ما يقول."]],
+"سجود السهو":[
+["ما هو سجود السهو؟","سجدتان يسجدهما المصلي لجبر خلل وقع في صلاته سهواً، وهو من هدي النبي ﷺ. ويرى كثير من أهل العلم وجوبه في مواضعه."],
+["صفته","سجدتان كسجود الصلاة، يكبر لهما ويقول فيهما «سبحان ربي الأعلى». وإن كان قبل السلام سلّم بعدهما، وإن كان بعد السلام كبّر وسجد ثم سلّم."],
+["الحالة ١: الزيادة","إن زاد ركوعاً أو سجوداً أو قياماً أو ركعة سهواً ثم تذكر، رجع فوراً وأتم صلاته على ما بقي، وسجد للسهو بعد السلام. ومثاله حديث ابن مسعود: صلى النبي ﷺ خمساً فلما سُئل سجد سجدتين بعدما سلّم (متفق عليه)."],
+["الحالة ٢: السلام قبل تمام الصلاة","إن سلّم قبل إتمامها ثم تذكر، أتم ما بقي ثم سلّم وسجد سجدتين. كما في حديث ذي اليدين (متفق عليه)."],
+["الحالة ٣: ترك ركن","إن تذكره قبل أن يصل إلى موضعه من الركعة التالية رجع فأتى به وبما بعده. وإن تذكره بعد الوصول إلى موضعه من الركعة التالية، بطلت الركعة التي تركه فيها وقامت التالية مقامها. وفي الحالتين يسجد للسهو."],
+["الحالة ٤: ترك واجب","كمن نسي التشهد الأول ونهض: إن تذكر قبل أن يستتم قائماً رجع وأتم، وإن استتم قائماً مضى في صلاته وسجد قبل السلام. كما فعل النبي ﷺ في حديث ابن بحينة (متفق عليه)."],
+["الحالة ٥: الشك مع ترجيح","إن شك في عدد الركعات وترجح عنده أحد الأمرين، عمل بما ترجح وأتم صلاته وسجد بعد السلام. لحديث ابن مسعود (متفق عليه)."],
+["الحالة ٦: الشك بلا ترجيح","إن استوى عنده الأمران بنى على الأقل وهو اليقين، وسجد قبل السلام. لحديث أبي سعيد الخدري (مسلم)."],
+["من كثر شكه","كمن يشك في كل صلاة فيعرض الشك ولا يلتفت إليه ولا سجود عليه."],
+["الشك بعد انتهاء الصلاة","لا يلتفت إليه ما لم يتيقن النقص."],
+["المأموم والمسبوق","المأموم يتابع إمامه في سجود السهو. والمسبوق إن سجد إمامه قبل السلام تابعه، وإن كان بعد السلام قام لقضاء ما فاته ثم سجد في آخر صلاته. وإن سها المأموم خلف إمامه تحمّل الإمام عنه."],
+["إذا نسي السجود","إن ذكره قريباً سجد، وإن طال الفصل سقط عند كثير من أهل العلم."],
+["ملاحظة","ما سبق ملخص تعليمي على ما قرره الحنابلة كابن باز وابن عثيمين، وللمسائل الخاصة أو المختلف فيها يُرجع لأهل العلم."]]};
+const SH=[["الزيادة","بعد السلام"],["النقص","قبل السلام"],["الشك مع ترجيح","بعد السلام"],["الشك بلا ترجيح","قبل السلام"],["السلام قبل تمام الصلاة","بعد السلام"]];
+const PRK=Object.keys(PR);let pk="الصفة";
+function vL(){const L=PR[pk];return`<div class="card"><h2>تعلّم الصلاة</h2><div class="row">${PRK.map(k=>`<button class="b ${k==pk?'':'g'}" onclick="pk='${k}';render()">${k}</button>`).join('')}</div></div>
+${pk=='سجود السهو'?`<div class="card"><h3>متى يكون السجود: قبل السلام أم بعده؟</h3>${SH.map(r=>`<div class="pt"><span>${r[0]}</span><b style="color:var(--p)">${r[1]}</b></div>`).join('')}</div>`:''}
+${L.map(r=>`<div class="card"><h3>${r[0]}</h3>${r[1]?`<p style="margin:2px 0">${r[1]}</p>`:''}</div>`).join('')}`}
+
+// ===== بحث الأحاديث داخل التطبيق (الدرر السنية) =====
+let DR={q:'',s:'idle',it:[]},DC={},DT=0;
+function dpar(h){const d=new DOMParser().parseFromString(h,'text/html'),out=[];d.querySelectorAll('.hadith').forEach(e=>{const n=e.nextElementSibling,inf=n&&n.classList.contains('hadith-info')?n:null,txt=e.textContent.replace(/\s+/g,' ').trim().replace(/^\d+\s*[-–.]\s*/,''),info={};if(inf){const t=inf.textContent.replace(/\s+/g,' ').trim(),L=['الراوي','المحدث','المصدر','الصفحة أو الرقم','خلاصة حكم المحدث'],re=new RegExp('('+L.join('|')+')\\s*:','g');let m,ix=[];while(m=re.exec(t))ix.push([m[1],m.index,re.lastIndex]);ix.forEach((x,i)=>{info[x[0]]=t.slice(x[2],ix[i+1]?ix[i+1][1]:undefined).trim()})}if(txt)out.push({txt,info})});return out}
+function dq(){clearTimeout(DT);const q=sq.trim();if(q.length<2||(st!=0&&st!=1)){DR={q:'',s:'idle',it:[]};srf();return}if(DC[q]){DR={q,s:'ok',it:DC[q]};srf();return}DT=setTimeout(()=>dgo(q),600)}
+async function dgo(q){DR={q,s:'load',it:[]};srf();const ac=new AbortController(),tm=setTimeout(()=>ac.abort(),9000);try{const r=await fetch('https://dorar.net/dorar_api.json?skey='+encodeURIComponent(q),{signal:ac.signal});if(!r.ok)throw 0;const j=await r.json(),it=dpar((j.ahadith&&j.ahadith.result)||'').slice(0,10);DC[q]=it;if(sq.trim()==q){DR={q,s:'ok',it};srf()}}catch(e){if(sq.trim()==q){DR={q,s:'err',it:[]};srf()}}finally{clearTimeout(tm)}}
+const dview=q=>{if(DR.q!=q)return'';if(DR.s=='load')return'<div class="card sm">جارٍ البحث في الدرر السنية…</div>';if(DR.s=='err')return'<div class="card sm">تعذر الاتصال بالدرر السنية الآن، تظهر نتائج المكتبة المدمجة فقط. جرّب زر «الدرر السنية» أدناه.</div>';if(DR.s!='ok')return'';if(!DR.it.length)return'<div class="card sm">لا نتائج من الدرر السنية لهذه الكلمة.</div>';const I=x=>DR.it.length&&x;return`<div class="sm" style="margin:6px 4px">${DR.it.length} حديثاً من الدرر السنية</div>`+DR.it.map(h=>`<div class="card"><span class="tag">حديث</span><span class="tag">الدرر السنية</span><p>«${esc(h.txt)}»</p>${['الراوي','المحدث','المصدر','الصفحة أو الرقم'].filter(k=>h.info[k]).map(k=>`<div class="sm"><b>${k}:</b> ${esc(h.info[k])}</div>`).join('')}${h.info['خلاصة حكم المحدث']?`<div class="sm" style="margin-top:4px"><b>الحكم:</b> <span style="color:var(--p)">${esc(h.info['خلاصة حكم المحدث'])}</span></div>`:''}</div>`).join('')+'<div class="sm" style="margin:0 4px 6px">المصدر: موقع الدرر السنية (dorar.net). راجع الحكم والتخريج هناك.</div>'};
+
+// ===== الموقع حول العالم =====
+let CR=[];
+const WC=`مكة المكرمة|Mecca|السعودية|21.3891|39.8579|Asia/Riyadh
+المدينة المنورة|Medina|السعودية|24.4686|39.6142|Asia/Riyadh
+الرياض|Riyadh|السعودية|24.7136|46.6753|Asia/Riyadh
+جدة|Jeddah|السعودية|21.4858|39.1925|Asia/Riyadh
+الدمام|Dammam|السعودية|26.4207|50.0888|Asia/Riyadh
+أبها|Abha|السعودية|18.2164|42.5053|Asia/Riyadh
+تبوك|Tabuk|السعودية|28.3835|36.5662|Asia/Riyadh
+القاهرة|Cairo|مصر|30.0444|31.2357|Africa/Cairo
+الإسكندرية|Alexandria|مصر|31.2001|29.9187|Africa/Cairo
+أسوان|Aswan|مصر|24.0889|32.8998|Africa/Cairo
+الرباط|Rabat|المغرب|34.0209|-6.8416|Africa/Casablanca
+الدار البيضاء|Casablanca|المغرب|33.5731|-7.5898|Africa/Casablanca
+فاس|Fes|المغرب|34.0331|-5.0003|Africa/Casablanca
+مراكش|Marrakesh|المغرب|31.6295|-7.9811|Africa/Casablanca
+طنجة|Tangier|المغرب|35.7595|-5.8340|Africa/Casablanca
+تونس|Tunis|تونس|36.8065|10.1815|Africa/Tunis
+صفاقس|Sfax|تونس|34.7406|10.7603|Africa/Tunis
+طرابلس|Tripoli|ليبيا|32.8872|13.1913|Africa/Tripoli
+بنغازي|Benghazi|ليبيا|32.1194|20.0868|Africa/Tripoli
+نواكشوط|Nouakchott|موريتانيا|18.0735|-15.9582|Africa/Nouakchott
+الخرطوم|Khartoum|السودان|15.5007|32.5599|Africa/Khartoum
+عمّان|Amman|الأردن|31.9454|35.9284|Asia/Amman
+القدس|Jerusalem|فلسطين|31.7683|35.2137|Asia/Jerusalem
+غزة|Gaza|فلسطين|31.5017|34.4668|Asia/Gaza
+بيروت|Beirut|لبنان|33.8938|35.5018|Asia/Beirut
+دمشق|Damascus|سوريا|33.5138|36.2765|Asia/Damascus
+حلب|Aleppo|سوريا|36.2021|37.1343|Asia/Damascus
+بغداد|Baghdad|العراق|33.3152|44.3661|Asia/Baghdad
+البصرة|Basra|العراق|30.5085|47.7835|Asia/Baghdad
+الكويت|Kuwait City|الكويت|29.3759|47.9774|Asia/Kuwait
+الدوحة|Doha|قطر|25.2854|51.5310|Asia/Qatar
+المنامة|Manama|البحرين|26.2285|50.5860|Asia/Bahrain
+أبوظبي|Abu Dhabi|الإمارات|24.4539|54.3773|Asia/Dubai
+دبي|Dubai|الإمارات|25.2048|55.2708|Asia/Dubai
+مسقط|Muscat|عُمان|23.5880|58.3829|Asia/Muscat
+صنعاء|Sanaa|اليمن|15.3694|44.1910|Asia/Aden
+مقديشو|Mogadishu|الصومال|2.0469|45.3182|Africa/Mogadishu
+إسطنبول|Istanbul|تركيا|41.0082|28.9784|Europe/Istanbul
+أنقرة|Ankara|تركيا|39.9334|32.8597|Europe/Istanbul
+طهران|Tehran|إيران|35.6892|51.3890|Asia/Tehran
+إسلام آباد|Islamabad|باكستان|33.6844|73.0479|Asia/Karachi
+كراتشي|Karachi|باكستان|24.8607|67.0011|Asia/Karachi
+لاهور|Lahore|باكستان|31.5497|74.3436|Asia/Karachi
+دلهي|Delhi|الهند|28.6139|77.2090|Asia/Kolkata
+مومباي|Mumbai|الهند|19.0760|72.8777|Asia/Kolkata
+دكا|Dhaka|بنغلاديش|23.8103|90.4125|Asia/Dhaka
+كابل|Kabul|أفغانستان|34.5553|69.2075|Asia/Kabul
+جاكرتا|Jakarta|إندونيسيا|-6.2088|106.8456|Asia/Jakarta
+كوالالمبور|Kuala Lumpur|ماليزيا|3.1390|101.6869|Asia/Kuala_Lumpur
+سنغافورة|Singapore|سنغافورة|1.3521|103.8198|Asia/Singapore
+بانكوك|Bangkok|تايلاند|13.7563|100.5018|Asia/Bangkok
+بكين|Beijing|الصين|39.9042|116.4074|Asia/Shanghai
+طوكيو|Tokyo|اليابان|35.6895|139.6917|Asia/Tokyo
+سيول|Seoul|كوريا الجنوبية|37.5665|126.9780|Asia/Seoul
+باريس|Paris|فرنسا|48.8566|2.3522|Europe/Paris
+مرسيليا|Marseille|فرنسا|43.2965|5.3698|Europe/Paris
+ليون|Lyon|فرنسا|45.7640|4.8357|Europe/Paris
+لندن|London|بريطانيا|51.5074|-0.1278|Europe/London
+برمنغهام|Birmingham|بريطانيا|52.4862|-1.8904|Europe/London
+برلين|Berlin|ألمانيا|52.5200|13.4050|Europe/Berlin
+مدريد|Madrid|إسبانيا|40.4168|-3.7038|Europe/Madrid
+برشلونة|Barcelona|إسبانيا|41.3874|2.1686|Europe/Madrid
+روما|Rome|إيطاليا|41.9028|12.4964|Europe/Rome
+بروكسل|Brussels|بلجيكا|50.8503|4.3517|Europe/Brussels
+أمستردام|Amsterdam|هولندا|52.3676|4.9041|Europe/Amsterdam
+ستوكهولم|Stockholm|السويد|59.3293|18.0686|Europe/Stockholm
+فيينا|Vienna|النمسا|48.2082|16.3738|Europe/Vienna
+زيورخ|Zurich|سويسرا|47.3769|8.5417|Europe/Zurich
+لشبونة|Lisbon|البرتغال|38.7223|-9.1393|Europe/Lisbon
+موسكو|Moscow|روسيا|55.7558|37.6173|Europe/Moscow
+سراييفو|Sarajevo|البوسنة|43.8563|18.4131|Europe/Sarajevo
+نيويورك|New York|أمريكا|40.7128|-74.0060|America/New_York
+واشنطن|Washington|أمريكا|38.9072|-77.0369|America/New_York
+شيكاغو|Chicago|أمريكا|41.8781|-87.6298|America/Chicago
+لوس أنجلوس|Los Angeles|أمريكا|34.0522|-118.2437|America/Los_Angeles
+تورنتو|Toronto|كندا|43.6532|-79.3832|America/Toronto
+مونتريال|Montreal|كندا|45.5017|-73.5673|America/Toronto
+مكسيكو|Mexico City|المكسيك|19.4326|-99.1332|America/Mexico_City
+ساو باولو|Sao Paulo|البرازيل|-23.5505|-46.6333|America/Sao_Paulo
+بوينس آيرس|Buenos Aires|الأرجنتين|-34.6037|-58.3816|America/Argentina/Buenos_Aires
+داكار|Dakar|السنغال|14.7167|-17.4677|Africa/Dakar
+لاغوس|Lagos|نيجيريا|6.5244|3.3792|Africa/Lagos
+أبوجا|Abuja|نيجيريا|9.0765|7.3986|Africa/Lagos
+نيامي|Niamey|النيجر|13.5116|2.1254|Africa/Niamey
+باماكو|Bamako|مالي|12.6392|-8.0029|Africa/Bamako
+أديس أبابا|Addis Ababa|إثيوبيا|9.0300|38.7400|Africa/Addis_Ababa
+نيروبي|Nairobi|كينيا|-1.2921|36.8219|Africa/Nairobi
+جوهانسبرغ|Johannesburg|جنوب أفريقيا|-26.2041|28.0473|Africa/Johannesburg
+كيب تاون|Cape Town|جنوب أفريقيا|-33.9249|18.4241|Africa/Johannesburg
+سيدني|Sydney|أستراليا|-33.8688|151.2093|Australia/Sydney
+ملبورن|Melbourne|أستراليا|-37.8136|144.9631|Australia/Melbourne
+أوكلاند|Auckland|نيوزيلندا|-36.8485|174.7633|Pacific/Auckland`.split("\n").map(r=>{const a=r.split("|");return{name:a[0],en:a[1],country:a[2],latitude:+a[3],longitude:+a[4],timezone:a[5]}});
+async function cgo(){const q=($('#cs').value||'').trim();if(q.length<2)return;const lq=q.toLowerCase(),loc0=WC.filter(c=>nz(c.name+' '+c.country).includes(nz(q))||c.en.toLowerCase().includes(lq));CR=[...loc0];const show=(note)=>{$('#cr').innerHTML=(CR.length?CR.map((c,i)=>`<button class="b g" style="display:block;width:100%;margin:4px 0;text-align:start" onclick="csel(${i})">${esc(c.name)}${c.admin1?'، '+esc(c.admin1):''}${c.country?' — '+esc(c.country):''}</button>`).join(''):'')+(note?`<div class="sm">${note}</div>`:'')};show(loc0.length?'':'جارٍ البحث…');try{const r=await fetch('https://geocoding-api.open-meteo.com/v1/search?count=8&format=json&language='+(F()?'fr':'ar')+'&name='+encodeURIComponent(q)),j=await r.json();for(const c of(j.results||[])){if(!CR.some(x=>Math.abs(x.latitude-c.latitude)<.2&&Math.abs(x.longitude-c.longitude)<.2))CR.push(c)}show(CR.length?'':'لا نتائج، جرّب كتابة الاسم بالإنجليزية أو اختر «موقعي الحالي».')}catch(e){show(CR.length?'':'تعذر الاتصال بخدمة البحث. اختر من قائمة «مدن العالم» أو أدخل الإحداثيات يدوياً من القائمة (مخصص).')}}
+function wsel(i){if(i==='')return;CR=[WC[+i]];csel(0)}
+function csel(i){const c=CR[i];if(!c)return;S.ci=C.length-1;S.lat=c.latitude;S.lng=c.longitude;S.tz=c.timezone||'';S.cn=c.name+(c.country?'، '+c.country:'');sv();render()}
+function gps(){if(!navigator.geolocation){bn('الجهاز لا يدعم تحديد الموقع');return}navigator.geolocation.getCurrentPosition(p=>{S.ci=C.length-1;S.lat=+p.coords.latitude.toFixed(4);S.lng=+p.coords.longitude.toFixed(4);S.tz='';S.cn='موقعي الحالي';sv();render()},()=>bn('تعذر تحديد موقعك. اسمح للموقع بالوصول أو ابحث باسم مدينتك.'),{timeout:12000,maximumAge:36e5})}
+
+// ===== القبلة =====
+const MK=[21.4225,39.8262];
+const qloc=()=>S.ql?[S.ql[0],S.ql[1]]:loc();
+const qlab=()=>S.ql?'موقعك الحالي (تلقائي)':lname();
+let QS=0,QG=0;
+function qauto(force){if(!navigator.geolocation)return;if(!force&&S.ql&&Date.now()-S.ql[2]<3e5)return;if(QG)return;QG=1;navigator.geolocation.getCurrentPosition(p=>{QG=0;S.ql=[+p.coords.latitude.toFixed(4),+p.coords.longitude.toFixed(4),Date.now()];sv();if(tab==4)render()},()=>{QG=0;if(force)bn('تعذر تحديد موقعك. اسمح للموقع بالوصول من إعدادات المتصفح.')},{timeout:12000,maximumAge:3e5})}
+function qinit(){if(tab!=4)return;qauto(false);const n=typeof DeviceOrientationEvent!='undefined'&&DeviceOrientationEvent.requestPermission;if(!QS&&!n&&typeof DeviceOrientationEvent!='undefined'){QS=1;qstart()}}
+const qb=(la,ln)=>{const r=Math.PI/180,p1=la*r,p2=MK[0]*r,dl=(MK[1]-ln)*r;return(Math.atan2(Math.sin(dl)*Math.cos(p2),Math.cos(p1)*Math.sin(p2)-Math.sin(p1)*Math.cos(p2)*Math.cos(dl))/r+360)%360};
+const kd=(la,ln)=>{const r=Math.PI/180,a=Math.sin((MK[0]-la)*r/2)**2+Math.cos(la*r)*Math.cos(MK[0]*r)*Math.sin((MK[1]-ln)*r/2)**2;return 12742*Math.asin(Math.sqrt(a))};
+const CP=['شمال','شمال شرق','شرق','جنوب شرق','جنوب','جنوب غرب','غرب','شمال غرب'];
+const cpn=a=>CP[Math.round(a/45)%8];
+let QH=null,QV=0;
+function qu(){const e=$('#dial');if(!e||QH==null)return;const[la,ln]=qloc(),q=qb(la,ln);e.style.transform='rotate('+(-QH)+'deg)';const on=Math.abs(((q-QH+540)%360)-180)<5;$('#qs').textContent=on?'أنت متجه نحو القبلة ✓':'أدر هاتفك حتى يصل رمز الكعبة إلى أعلى';$('#qs').style.color=on?'var(--p)':'';if(on&&!QV&&navigator.vibrate)navigator.vibrate(60);QV=on?1:0}
+function qh(e){let h=e.webkitCompassHeading;if(h==null&&(e.absolute||e.type=='deviceorientationabsolute')&&e.alpha!=null)h=(360-e.alpha)%360;if(h==null)return;QH=h;qu()}
+function qstart(){const go=()=>{QS=1;addEventListener('deviceorientationabsolute',qh,true);addEventListener('deviceorientation',qh,true);const b=$('#qb');if(b)b.hidden=true;const t=$('#qs');if(t)t.textContent='جارٍ قراءة البوصلة…';setTimeout(()=>{if(QH==null&&$('#qs'))$('#qs').textContent='لم تصل قراءة من البوصلة. تأكد من إذن الحسّاسات وأن جهازك فيه بوصلة.'},3500)};try{if(typeof DeviceOrientationEvent!='undefined'&&DeviceOrientationEvent.requestPermission)DeviceOrientationEvent.requestPermission().then(r=>r=='granted'?go():bn('لم يُسمح بحسّاس الاتجاه')).catch(()=>bn('تعذر تفعيل البوصلة'));else go()}catch(e){bn('تعذر تفعيل البوصلة في هذا المتصفح')}}
+function vK(){setTimeout(qinit,60);const[la,ln]=qloc(),q=qb(la,ln),km=Math.round(kd(la,ln)),tk=[...Array(12)].map((_,i)=>`<line x1="100" y1="12" x2="100" y2="${i%3?18:24}" transform="rotate(${i*30} 100 100)" style="stroke:var(--m);stroke-width:${i%3?1.5:2.5}"/>`).join('');
+return`<div class="card" style="text-align:center"><h2>اتجاه القبلة</h2><div class="sm">الموقع: <b>${esc(qlab())}</b></div>
+<svg viewBox="0 0 200 200" style="width:min(86vw,320px);max-width:100%;margin:8px auto;display:block;filter:drop-shadow(0 0 14px var(--g))"><circle cx="100" cy="100" r="94" style="fill:var(--gl);stroke:var(--p);stroke-width:2"/>
+<g id="dial" style="transform-origin:100px 100px;transition:transform .15s linear;transform:rotate(${QH==null?0:-QH}deg)">${tk}
+<text x="100" y="40" text-anchor="middle" style="fill:var(--p);font:700 14px sans-serif">ش</text><text x="164" y="105" text-anchor="middle" style="fill:var(--m);font:700 13px sans-serif">شرق</text><text x="100" y="170" text-anchor="middle" style="fill:var(--m);font:700 13px sans-serif">ج</text><text x="36" y="105" text-anchor="middle" style="fill:var(--m);font:700 13px sans-serif">غرب</text>
+<g transform="rotate(${q.toFixed(1)} 100 100)"><line x1="100" y1="100" x2="100" y2="38" style="stroke:var(--p);stroke-width:3;stroke-linecap:round"/><rect x="91" y="14" width="18" height="18" rx="2" style="fill:var(--on);stroke:var(--p);stroke-width:2.5"/><path d="M91 20h18" style="stroke:var(--p);stroke-width:2"/><circle cx="100" cy="100" r="5" style="fill:var(--p)"/></g></g>
+<path d="M100 2l7 10h-14z" style="fill:var(--t)"/></svg>
+<div style="font-size:26px;font-weight:700;color:var(--p)">${Math.round(q)}° ${cpn(q)}</div><div class="sm">المسافة إلى مكة المكرمة نحو ${km.toLocaleString('ar-DZ')} كم</div>
+<div id="qs" class="sm" style="margin-top:6px;min-height:24px">${QH==null?'الرمز في الدائرة يشير إلى القبلة حسب الشمال.':'جارٍ قراءة البوصلة…'}</div>
+<button id="qb" class="b" onclick="qstart()" ${QH!=null?'hidden':''}>تفعيل البوصلة الحية</button>
+<div class="row" style="margin-top:8px;justify-content:center"><button class="b g" onclick="qauto(true)">📍 تحديث موقعي</button>${S.ql?'<button class="b g" onclick="S.ql=null;sv();render()">استخدام المدينة المختارة</button>':''}</div>
+<details style="margin-top:8px"><summary class="sm" style="cursor:pointer">تدوير يدوي للتجربة (بدون حسّاس)</summary><input type="range" min="0" max="359" value="${QH==null?0:Math.round(QH)}" style="width:100%" oninput="QH=+this.value;qu()"></details>
+<div class="sm" style="margin-top:8px">يُحدَّد موقعك والبوصلة تلقائياً عند فتح هذا التبويب بعد أن تسمح بذلك للمتصفح، وإن لم تسمح تُستعمل المدينة المختارة في تبويب «الصلاة». ابعد الهاتف عن المعادن والمغناطيس، وحرّكه على شكل رقم 8 لمعايرة البوصلة.</div></div>`}
+
+// ===== حديث وذكر اليوم =====
+const DZ=[["سبحان الله وبحمده، سبحان الله العظيم","«كلمتان خفيفتان على اللسان، ثقيلتان في الميزان، حبيبتان إلى الرحمن» (متفق عليه)"],["لا حول ولا قوة إلا بالله","«كنز من كنوز الجنة» (متفق عليه)"],["أستغفر الله وأتوب إليه",""],["اللهم صل وسلم على نبينا محمد","«من صلى علي صلاة صلى الله عليه بها عشراً» (مسلم)"],["اللهم إنك عفو تحب العفو فاعف عني","دعاء أوصى به النبي ﷺ عائشة رضي الله عنها في ليلة القدر (الترمذي)"],["يا مقلب القلوب ثبت قلبي على دينك","كان أكثر دعاء النبي ﷺ (الترمذي)"],["ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار","كان أكثر دعاء النبي ﷺ (متفق عليه)"],["رب اغفر لي وتب علي إنك أنت التواب الرحيم",""],["حسبنا الله ونعم الوكيل",""],["لا إله إلا أنت سبحانك إني كنت من الظالمين","دعوة ذي النون (الترمذي)"],["اللهم أعني على ذكرك وشكرك وحسن عبادتك","أوصى به النبي ﷺ معاذاً (أبو داود)"],["رضيت بالله رباً وبالإسلام ديناً وبمحمد ﷺ نبياً",""],["اللهم إني أسألك الهدى والتقى والعفاف والغنى","(مسلم)"],["اللهم آت نفسي تقواها وزكها أنت خير من زكاها أنت وليها ومولاها","(مسلم)"],["اللهم إني أعوذ بك من الهم والحزن والعجز والكسل والبخل والجبن وضلع الدين وغلبة الرجال","(البخاري)"],["ربنا لا تزغ قلوبنا بعد إذ هديتنا وهب لنا من لدنك رحمة إنك أنت الوهاب","(آل عمران)"],["رب زدني علماً","(طه)"],["سبحان الله والحمد لله ولا إله إلا الله والله أكبر","«أحب الكلام إلى الله أربع» (مسلم)"],["الحمد لله","«والحمد لله تملأ الميزان» (مسلم)"],["لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير","«من قالها مئة مرة في يوم كانت له عدل عشر رقاب» (متفق عليه)"],["اللهم اغفر لي ولوالدي وللمؤمنين يوم يقوم الحساب","(إبراهيم)"],["حسبي الله لا إله إلا هو عليه توكلت وهو رب العرش العظيم","(التوبة)"]];
+const doy=()=>{const n=new Date();return Math.floor((new Date(n.getFullYear(),n.getMonth(),n.getDate())-new Date(n.getFullYear(),0,0))/864e5)};
+function cp(t){try{navigator.clipboard.writeText(t).then(()=>bn('تم النسخ'),()=>bn('تعذر النسخ'))}catch(e){bn('تعذر النسخ')}}
+function vD(){const n=doy(),h=HD[n%HD.length],z=DZ[n%DZ.length];window.__dz=['«'+h[1]+'» ('+h[3]+')',z[0]];const cb=i=>`<button class="b g" style="padding:3px 14px;font-size:13px;flex:0 0 auto" onclick="cp(__dz[${i}])">نسخ</button>`;
+return`<div class="card"><h2>حديث اليوم</h2><p style="margin:2px 0">«${h[1]}»</p><div class="hd"><div class="sm">الراوي: ${h[2]} · ${h[3]}</div>${cb(0)}</div>
+<div class="orn" style="margin:8px 0"></div><h3 style="color:var(--p)">ذكر اليوم</h3><p style="margin:2px 0">${z[0]}</p><div class="hd">${z[1]?`<div class="sm">${z[1]}</div>`:'<span></span>'}${cb(1)}</div></div>`}
+// ===== البحث الشامل: أحاديث وفتاوى العلماء =====
+const SC=[["ابن تيمية","ابن تيمية","islamweb.net"],["ابن باز","ابن باز","binbaz.org.sa"],["ابن عثيمين","ابن عثيمين","binothaimeen.net"],["الشيخ فركوس","فركوس","ferkous.com"],["الألباني","الألباني",""],["الفوزان","الفوزان","alfawzan.af.org.sa"],["اللجنة الدائمة","اللجنة الدائمة","alifta.gov.sa"],["علماء السنة (عام)","","islamqa.info"]];
+let sq='',sk=[0,1,2,3,4,5,6,7],st=0;
+const gq=(u)=>window.open(u,'_blank','noopener');
+function slr(){const q=nz(sq.trim()),A=SC.filter((c,i)=>sk.includes(i));
+ const H=(st==0||st==1)&&q?HD.filter(h=>nz(h[1]+h[2]+h[0]+h[3]).includes(q)):[];
+ const PL=(st==0||st==3)&&q?PRK.flatMap(k=>PR[k].map(r=>[k,r[0],r[1]])).filter(r=>nz(r[0]+r[1]+r[2]).includes(q)):[];
+ const Fa=(st==0||st==2)&&q?FD.filter(f=>(sk.includes(7)||A.some(c=>c[1]&&f[1].includes(c[1])))&&nz(f[0]+f[2]+f[3]+f[1]).includes(q)):[];
+ const ext=q?`<div class="card"><h3>بحث موسّع في المصادر الأصلية (يحتاج إنترنت)</h3><div class="sm">مصادر موثوقة تفتح في نافذة جديدة بنص بحثك:</div><div class="row" style="margin-top:6px">${[...A.map(c=>`<button class="b g" onclick="sgo(${SC.indexOf(c)})">${c[0]}</button>`),(st!=2?'<button class="b g" onclick="sdr()">الدرر السنية (الحديث)</button>':'')].join('')}</div></div>`:'';
+ return(q?`<div class="sm" style="margin:6px 4px">${H.length+Fa.length+PL.length} نتيجة في المكتبة المدمجة</div>`:'<div class="card">اكتب كلمة للبحث في الأحاديث والفتاوى.</div>')
+ +PL.map(r=>`<div class="card"><span class="tag">تعلّم الصلاة</span><span class="tag">${r[0]}</span><h3>${r[1]}</h3><p>${r[2]}</p></div>`).join('')
+ +Fa.map(f=>`<div class="card"><span class="tag">${f[0]}</span><span class="tag">${f[1]}</span><h3>${f[2]}</h3><p>${f[3]}</p></div>`).join('')
+ +H.map(h=>`<div class="card"><span class="tag">حديث</span><span class="tag">${h[0]}</span><span class="tag">${h[3]}</span><p>«${h[1]}»</p><div class="sm">عن ${h[2]} رضي الله عنه</div></div>`).join('')
+ +dview(sq.trim())+(q&&!H.length&&!Fa.length&&!PL.length&&DR.s!='ok'?'<div class="card">لا نتائج في المكتبة المدمجة، جرّب البحث الموسّع أدناه.</div>':'')+ext}
+function srf(){$('#sl').innerHTML=slr()}
+function sgo(i){const q=sq.trim(),c=SC[i];if(!q)return;gq('https://www.google.com/search?q='+encodeURIComponent((c[2]?'site:'+c[2]+' ':c[1]+' ')+q+(c[2]?'':' فتوى')))}
+function sdr(){const q=sq.trim();if(q)gq('https://dorar.net/hadith/search?q='+encodeURIComponent(q))}
+function vS(){return`<div class="card"><h2>بحث في الأحاديث والفتاوى وأحكام الصلاة</h2><input id="sqi" style="width:100%" type="search" placeholder="ابحث بكلمة أو مسألة… مثال: سجود السهو" value="${sq.replace(/"/g,'&quot;')}" oninput="sq=this.value;srf();dq()" onkeydown="if(event.key=='Enter')srf()">
+<div class="row" style="margin-top:6px"><select onchange="st=+this.value;srf();dq()"><option value=0 ${st==0?'selected':''}>الكل</option><option value=3 ${st==3?'selected':''}>أحكام الصلاة فقط</option><option value=1 ${st==1?'selected':''}>أحاديث فقط</option><option value=2 ${st==2?'selected':''}>فتاوى فقط</option></select></div>
+<div class="chips">${SC.map((c,i)=>`<label><input type="checkbox" ${sk.includes(i)?'checked':''} onchange="sk=this.checked?[...sk,${i}]:sk.filter(x=>x!=${i});srf()"> ${c[0]}</label>`).join('')}</div>
+<div class="sm">المكتبة المدمجة مختصرة وتعمل دون إنترنت، وهي خلاصات وليست نصوصاً حرفية. للنص الكامل والتوثيق استعمل البحث الموسّع في المواقع الرسمية لكل عالم (ابن باز، ابن عثيمين، الشيخ فركوس وغيرهم).</div></div><div id="sl">${slr()}</div>`}
+lf();ld();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+render();
+</script><script>
+/* جسر التطبيق الأصلي (أندرويد): يرسل جدول الصلوات والتذكيرات ليجدول النظام المنبّهات الدقيقة */
+var _nt;function nsd(){if(!window.RafiqiNative)return;clearTimeout(_nt);_nt=setTimeout(nsync,700)}
+function nsync(){try{const[la,ln]=loc(),N=Date.now(),ev=[],rm=[],T=ms=>cd(new Date(ms)).toTimeString().slice(0,5);
+for(let o=0;o<=5;o++){const d=new Date(N+o*864e5),f=cd(d),t=pt(f,la,ln,cto(d.getTime())),b=new Date(f.getFullYear(),f.getMonth(),f.getDate()).getTime()-(f.getTime()-d.getTime());
+[0,2,3,4,5].forEach(i=>{const ms=b+t[i]*36e5;if(ms<N-6e4)return;const off=S.off&&S.off[i],fl=(i==0&&S.ff)?S.ff:S.fl;ev.push({ms:Math.round(ms),nm:pn(i),hm:T(ms),ad:(S.nt&&!off)?1:0,f:(fl&&fl.startsWith('adhan/'))?fl.slice(6):'',nw:(S.nn&&NW[i]&&!off)?NW[i]:''})});
+const R=S.rm;if(R){const h=rmh(d);RMD.forEach(r=>{const k=r[0];if(!R[k])return;if(k=='sym'){const tw=new Date(d.getTime()+864e5),w=tw.getDay(),hd=hjD(tw);if(!(w==1||w==4||(hd>=13&&hd<=15)))return}
+const hs=k=='bsl'?h.bsl.filter((x,i)=>!(S.off&&S.off[[0,2,3,4,5][i]])):[h[k]];hs.forEach(x=>{const m=((Math.round(x*60)%1440)+1440)%1440,ms=b+m*6e4;if(ms>N)rm.push({ms:Math.round(ms),t:r[1],x:RMT[k],tab:r[2],ak:r[3]||''})})})}}
+RafiqiNative.sync(JSON.stringify({fr:F(),pin:S.pn?1:0,ev,rm}))}catch(e){}}
+setInterval(nsd,6*36e5);setTimeout(nsd,1500);document.addEventListener('visibilitychange',()=>{if(!document.hidden)nsd()});
+</script>
+</body></html>
